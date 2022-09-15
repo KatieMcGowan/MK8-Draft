@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+/*Universal & Header*/
+* {
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(238, 75, 75);
+  color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*/////////////////////////////////////*/
+/*StartScreen page & components*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.startscreen-wrapper {
+  margin: 30px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.draft-setup-questions {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.how-many-players-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+  margin: 0 5px 0 0;
+}
+
+.players-input {
+  width: 30px;
+}
+
+.placement-options-wrapper {
+  text-align: center;
+}
+
+.placement-options {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.placement-options-text {
+  margin: 10px 0 0 0;
+}
+
+.placement-buttons {
+  background-color: rgb(54, 115, 238);
+  border: groove 5px blue;
+  border-radius: 20px;
+  color: whitesmoke;
+  max-width: 80px;
+  margin: 10px 5px;
+}
+
+.players-wrapper-headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.players-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.players-name-placement {
+  padding: 0 0 5px 0;
+}
+
+.player-placement {
+  width: 30px;
+  margin: 0 0 0 5px; 
+}
+
+.submit {
+  align-self: center;
+  background-color: rgb(54, 115, 238);
+  border: groove 5px blue;
+  border-radius: 20px;
+  color: whitesmoke;
+}
+
+/*/////////////////////////////////////*/
+/*DraftSelect Page & Components*/
+
+.draft-wrapper {
+  margin: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.draft-header {
+  align-self: center;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+ol {
+  margin-left: -25px;
+}
+
+ul {
+  margin-left: -20px;
+}
+
+.draft-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.draft-left {
+  width: 33.3%;
+  border: solid 5px purple
+}
+
+.turn-order-header{
+  margin: 0 0 10px 0;
+}
+
+.draft-right {
+  width: 66.6%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 0 25px;
+  border: solid 5px plum
+}
+
+.placeholder {
+  background-color: pink;
+  height: 75px;
+  width: 100px;
+  margin: 5px;
 }

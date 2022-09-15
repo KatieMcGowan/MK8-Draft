@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom"
+import Header from './components/Header';
 import StartScreen from './pages/StartScreen';
 import DraftSelect from './pages/DraftSelect';
 import Results from './pages/Results';
@@ -10,6 +11,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route exact path={"/"} element={<StartScreen />} />
         <Route path={"/draft"} element={<DraftSelect />} />
