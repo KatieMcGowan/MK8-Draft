@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom"
+import StartScreen from './pages/StartScreen';
+import DraftSelect from './pages/DraftSelect';
+import Results from './pages/Results';
 
-function App() {
+const App = () => {
+  const [players, setPlayers] = useState([])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route exact path={"/"} element={<StartScreen />} />
+        <Route path={"/draft"} element={<DraftSelect />} />
+        <Route path={"/results"} element={<Results />} />
+      </Routes>
     </div>
   );
 }
