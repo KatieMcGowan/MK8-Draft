@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import StartScreenPlayerInput from "../components/StartScreenPlayerInput";
 import "./StartScreen.css"
 
 const StartScreen = () => {
+  //TOGGLES PLAYER FIELDS AFTER NUMBER OF PLAYERS ARE SELECTED
   const [display, setDisplay] = useState(false);
 
+  //POPULATES PLAYER STATE WITH AN ARRAY OF OBJECTS INDEXED TO NUMBER SELECTED
   const [numberInput, setNumber] = useState({
     number: "",
   })
 
-  const [players, setPlayers] = useState()
+  const [players, setPlayers] = useState([])
 
   const handleChange = (event) => {
     setNumber({
@@ -21,7 +24,9 @@ const StartScreen = () => {
   const handlePlayers = (event) => {
     event.preventDefault()
     toggleDisplay()
-    setPlayers(numberInput)
+    for (let i = 0; i < numberInput.number; i++) {
+      players.push({player: ""})
+    }
   }
 
   const toggleDisplay = () => {
@@ -29,8 +34,15 @@ const StartScreen = () => {
       setDisplay(true)
     } else {
       setDisplay(false)
+      setNumber({
+        number: ""
+      });
+      setPlayers([]);
     }
   }
+
+  // console.log(numberInput)
+  // console.log(players);
 
 
   return(
@@ -60,7 +72,15 @@ const StartScreen = () => {
           <p className="name-label">Type in players names in order of first place to last place</p>
         </div>  
         <div className="players-wrapper">
-          <div className="players-name-placement">
+          {players.map((player, index) => {
+            return(
+              <StartScreenPlayerInput
+                player={player}
+                index={index}
+              />  
+            )
+          })}
+          {/* <div className="players-name-placement">
             <input
               className="player-name"
               type="text"
@@ -83,7 +103,7 @@ const StartScreen = () => {
               className="player-name"
               type="text"
             />  
-          </div>
+          </div> */}
           <p className="more-players" onClick={() => toggleDisplay()}>Wait, more players showed up.</p>
         </div>   
         <div className="placement-options-wrapper">
