@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./StartScreen.css"
 
 const StartScreen = () => {
   // const [players, setPlayers] = useState({
@@ -35,69 +36,44 @@ const StartScreen = () => {
                 // onChange={togglePlayers}
               />  
           </div>
-          <div className="placement-options-wrapper">
-            <p className="placement-options-text">Placement options:</p>
-            <div className="placement-options">
-              <button className="placement-buttons">Previous winners go first</button>
-              <button className="placement-buttons">Previous losers go first</button>
-              <button className="placement-buttons">Randomize placement</button>
-            </div>
-          </div> 
         <div className="players-wrapper-headers">
           <p>Name</p>
-          <p>No.</p>
         </div>  
         <div className="players-wrapper">
           <div class="players-name-placement">
             <input
               className="player-name"
               type="text"
-            />
-            <input
-              className="player-placement"
-              type="number"
-              min="1"
-              max="12"
-            />    
+            /> 
           </div>
           <div class="players-name-placement">
             <input
               className="player-name"
               type="text"
-            />
-            <input
-              className="player-placement"
-              type="number"
-              min="1"
-              max="12"
-            />    
+            />  
           </div>
           <div class="players-name-placement">
             <input
               className="player-name"
               type="text"
-            />
-            <input
-              className="player-placement"
-              type="number"
-              min="1"
-              max="12"
-            />    
+            />   
           </div>
           <div class="players-name-placement">
             <input
               className="player-name"
               type="text"
-            />
-            <input
-              className="player-placement"
-              type="number"
-              min="1"
-              max="12"
-            />    
+            />  
           </div>
         </div>   
-        <input type="submit" className="submit" value="Submit"></input>
+        {/* <input type="submit" className="submit" value="Submit"></input> */}
+        <div className="placement-options-wrapper">
+            <p className="placement-options-text">Draft Options</p>
+            <div className="placement-options">
+              <div className="placement-buttons"><p className="draft-text">Previous winners go first</p></div>
+              <div className="placement-buttons"><p className="draft-text">Previous losers go first</p></div>
+              <div className="placement-buttons"><p className="draft-text">Randomize placement</p></div >
+            </div>
+          </div> 
         </div>
       </form>
     </div>

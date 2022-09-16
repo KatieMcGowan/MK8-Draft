@@ -1,0 +1,109 @@
+.startscreen-wrapper {
+  margin: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.draft-setup-questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.how-many-players-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+label {
+  margin: 0 5px 0 0;
+}
+
+.players-input {
+  width: 30px;
+}
+
+.placement-options-wrapper {
+  text-align: center;
+}
+
+.placement-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.placement-options-text {
+  margin: 10px 0 0 0;
+
+}
+
+.placement-buttons {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: linear-gradient(0.25turn, rgb(249, 196, 5),  rgb(246, 230, 87));
+  margin: 10px 0;
+}
+
+.placement-buttons:after {
+  content: "";
+  position: absolute;
+  left: 0; 
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+} 
+
+.placement-buttons:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid rgb(246, 230, 87);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.draft-text {
+  padding: 10px 0  10px 20px;
+  font-size: 14px;
+}
+
+.players-wrapper-headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.players-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.players-name-placement {
+  padding: 0 0 5px 0;
+}
+
+.player-placement {
+  width: 30px;
+  margin: 0 0 0 5px; 
+}
+
+.submit {
+  align-self: center;
+  background-color: rgb(54, 115, 238);
+  border: groove 5px blue;
+  border-radius: 20px;
+  color: whitesmoke;
+}

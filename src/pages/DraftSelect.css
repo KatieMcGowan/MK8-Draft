@@ -1,0 +1,48 @@
+.draft-wrapper {
+  margin: 30px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.draft-header {
+  align-self: center;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+ol {
+  margin-left: -25px;
+}
+
+ul {
+  margin-left: -20px;
+}
+
+.draft-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.draft-left {
+  width: 33.3%;
+  border: solid 5px purple
+}
+
+.turn-order-header{
+  margin: 0 0 10px 0;
+}
+
+.draft-right {
+  width: 66.6%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 0 25px;
+  border: solid 5px plum
+}
+
+.placeholder {
+  background-color: pink;
+  height: 75px;
+  width: 100px;
+  margin: 5px;
+}

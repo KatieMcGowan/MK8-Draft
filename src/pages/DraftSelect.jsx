@@ -1,3 +1,5 @@
+import "./DraftSelect.css"
+
 const DraftSelect = () => {
   return(
     <div className="draft-wrapper">
