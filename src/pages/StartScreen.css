@@ -19,6 +19,47 @@
 
 label {
   margin: 0 5px 0 0;
+  font-size: 12px;
+}
+
+input {
+  padding: 3px 0 3px 3px ;
+}
+
+.letsa-go {
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 100px;
+  align-self: center;
+  margin: 5px 0 0 0;
+  background: linear-gradient(0.25turn, rgb(249, 196, 5),  rgb(246, 230, 87));
+  border: solid 3px rgb(249, 159, 14)
+}
+
+
+.letsa-go:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.more-players {
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 250px;
+  align-self: center;
+  text-align: center;
+  margin: 5px 0 0 0;
+  background: linear-gradient(0.25turn, rgb(249, 196, 5),  rgb(246, 230, 87));
+  border: solid 3px rgb(249, 159, 14)
+}
+
+.more-players:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.name-label {
+  font-size: 12px;
+  max-width: 200px;
+  text-align: center; 
 }
 
 .players-input {
@@ -38,7 +79,7 @@ label {
 
 .placement-options-text {
   margin: 10px 0 0 0;
-
+  font-size: 12px;
 }
 
 .placement-buttons {
@@ -106,4 +147,20 @@ label {
   border: groove 5px blue;
   border-radius: 20px;
   color: whitesmoke;
+}
+
+@media (min-width: 600px) {
+  label {
+    font-size: 16px;
+  }
+
+  .name-label {
+    font-size: 16px;
+    max-width: 300px;
+    margin: 10px 0 0 0;
+  }
+
+  .placement-options-text {
+    font-size: 16px;
+  }
 }
