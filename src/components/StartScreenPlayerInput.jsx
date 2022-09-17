@@ -2,15 +2,13 @@ import React, {useState} from "react"
 
 const StartScreenPlayerInput = (props) => {
 
-  console.log(props)
-
-  const [name, setName] = useState({})
-
   return(
     <div className="players-name-placement">
       <input className="player-name"
         type="text"
-        key="index"
+        name="player"
+        value={props.player.player}
+        onChange={event => props.handleNameInput(props.index, event)}
       />  
     </div>
   );    

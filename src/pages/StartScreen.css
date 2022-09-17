@@ -30,7 +30,7 @@ input {
   font-family: 'Noto Sans JP', sans-serif;
   width: 100px;
   align-self: center;
-  margin: 5px 0 0 0;
+  margin: 20px 0 0 0;
   background: linear-gradient(0.25turn, rgb(249, 196, 5),  rgb(246, 230, 87));
   border: solid 3px rgb(249, 159, 14)
 }

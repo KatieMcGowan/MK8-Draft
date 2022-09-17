@@ -26,8 +26,8 @@ const StartScreen = () => {
     toggleDisplay()
     for (let i = 0; i < numberInput.number; i++) {
       players.push({player: ""})
-    }
-  }
+    };
+  };
 
   const toggleDisplay = () => {
     if (display === false) {
@@ -38,13 +38,18 @@ const StartScreen = () => {
         number: ""
       });
       setPlayers([]);
-    }
-  }
+    };
+  };
 
-  // console.log(numberInput)
-  // console.log(players);
+  const handleNameInput = (index, event) => {
+    let data = [...players]
+    data[index][event.target.name] = event.target.value 
+    setPlayers(data);
+  };
 
 
+  console.log(players);
+  
   return(
     <div className="startscreen-wrapper">
       {display === false 
@@ -77,6 +82,8 @@ const StartScreen = () => {
               <StartScreenPlayerInput
                 player={player}
                 index={index}
+                key={index}
+                handleNameInput={handleNameInput}
               />  
             )
           })}

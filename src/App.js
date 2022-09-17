@@ -9,13 +9,15 @@ import Results from './pages/Results';
 const App = () => {
   const [players, setPlayers] = useState([])
 
+  // console.log(players)
+
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route exact path={"/"} element={<StartScreen />} />
-        <Route path={"/draft"} element={<DraftSelect />} />
-        <Route path={"/results"} element={<Results />} />
+        <Route exact path={"/"} element={<StartScreen setPlayers={setPlayers}/>} />
+        <Route path={"/draft"} element={<DraftSelect setPlayers={setPlayers}/>} />
+        <Route path={"/results"} element={<Results setPlayers={setPlayers}/>} />
       </Routes>
     </div>
   );
