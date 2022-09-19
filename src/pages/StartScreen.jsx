@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import StartScreenPlayerInput from "../components/StartScreenPlayerInput";
 import "./StartScreen.css"
 
-const StartScreen = () => {
+const StartScreen = (props) => {
   //TOGGLES PLAYER FIELDS AFTER NUMBER OF PLAYERS ARE SELECTED
   const [display, setDisplay] = useState(false);
 
@@ -41,15 +41,40 @@ const StartScreen = () => {
     };
   };
 
+  //HANDLES USERS INPUTTING PLAYER NAME 
   const handleNameInput = (index, event) => {
     let data = [...players]
     data[index][event.target.name] = event.target.value 
     setPlayers(data);
   };
 
+  //DRAFT OPTION FUNCTIONS
+  let navigate = useNavigate()
+  const winnersGoFirst = () => {
+    props.setPlayers(players)
+    navigate("/draft")
+  }
 
-  console.log(players);
-  
+  const losersGoFirst = () => {
+    let sortedPlayers = []
+    for (let i = players.length - 1; i >= 0; i--) {
+      sortedPlayers.push(players[i])
+    }
+    props.setPlayers(sortedPlayers)
+    navigate("/draft")
+  }
+
+  // const randomize = (array)  => {
+  //   let sortedPlayers = []
+  //   for (let i = array.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [array[i], array[j]] = [array[j], array[i]];
+  //     sortedPlayers.push(array[i])
+  //   }
+  //   props.setPlayers(sortedPlayers);
+  // }
+
+
   return(
     <div className="startscreen-wrapper">
       {display === false 
@@ -87,38 +112,14 @@ const StartScreen = () => {
               />  
             )
           })}
-          {/* <div className="players-name-placement">
-            <input
-              className="player-name"
-              type="text"
-            /> 
-          </div>
-          <div className="players-name-placement">
-            <input
-              className="player-name"
-              type="text"
-            />  
-          </div>
-          <div className="players-name-placement">
-            <input
-              className="player-name"
-              type="text"
-            />   
-          </div>
-          <div className="players-name-placement">
-            <input
-              className="player-name"
-              type="text"
-            />  
-          </div> */}
-          <p className="more-players" onClick={() => toggleDisplay()}>Wait, more players showed up.</p>
+          <p className="more-players" onClick={() => toggleDisplay()}>Wait, more players showed up.</p> 
         </div>   
         <div className="placement-options-wrapper">
-            <p className="placement-options-text">Draft Options</p>
+            <p className="placement-options-text">Once all players names are typed in, select one of the draft options below to start the draft</p>
             <div className="placement-options">
-              <div className="placement-buttons"><p className="draft-text">Previous winners go first</p></div>
-              <div className="placement-buttons"><p className="draft-text">Previous losers go first</p></div>
-              <div className="placement-buttons"><p className="draft-text">Randomize placement</p></div >
+              <div className="placement-buttons" onClick={() => winnersGoFirst()}><p className="draft-text">Previous winners go first</p></div>
+              <div className="placement-buttons" onClick={() => losersGoFirst()}><p className="draft-text">Previous losers go first</p></div>
+              {/* <div className="placement-buttons"><p className="draft-text">Randomize placement</p></div> */}
             </div>
           </div> 
         </div>
