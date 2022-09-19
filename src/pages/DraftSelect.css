@@ -10,12 +10,8 @@
   margin: 0 0 10px 0;
 }
 
-ol {
-  margin-left: -25px;
-}
-
-ul {
-  margin-left: -20px;
+.turn-order-header{
+  margin: 0 0 10px 0;
 }
 
 .draft-body {
@@ -23,14 +19,49 @@ ul {
   flex-direction: row;
 }
 
+
 .draft-left {
   width: 33.3%;
-  border: solid 5px purple
+  border: solid 5px purple;
+  padding: 10px;
 }
 
-.turn-order-header{
-  margin: 0 0 10px 0;
+.player-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.another-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.name-and-placement {
+  display: flex;
+  flex-direction: row;
+}
+
+.player-draft-picks {
+  margin: 0 0 0 10px;
+}
+
+.show-stats {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  
+  border-top: 10px solid rgb(245, 55, 178);
+}
+
+.show-stats:hover {
+  cursor: pointer;
+  transform: scale(1.1)
+}
+
 
 .draft-right {
   width: 66.6%;
