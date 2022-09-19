@@ -20,29 +20,12 @@ const DraftCounter = (props) => {
     return () => clearInterval(countdown)
   }, [count])
 
-  // useEffect(() => {
-  //   if (count === 0 && index <= players.length) {
-  //     setTimeout(() => {
-  //       setIndex(index + 1)
-  //     }, 1000);
-  //     console.log(index)
-  //     setTimeout(() => {
-  //       setPlayerUp(players[index])
-  //     }, 1500)
-  //     console.log(playerUp)
-  //     setTimeout(() => {
-  //       setCount(5)
-  //     }, 2000)
-  //   }
-  // }, [count])
-
   useEffect(() => {
-    if (count === 0) {
+    if (count === 0 && index < players.length - 1) {
       setIndex(index + 1)
-      if (index >= players.length) {
-        setIndex(0)
-      }
-    } 
+    } else if (count === 0 && index === players.length - 1) {
+      setIndex(0)
+    }
   }, [count])
 
   useEffect(() => {
