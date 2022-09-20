@@ -19,7 +19,11 @@ const DraftPlayer = (props) => {
   }
 
   return(
-    <div className="player-wrapper">
+    <div className=
+    {props.playerUp.player === props.player.player
+      ? "playerup-wrapper"
+      : "player-wrapper"
+    }>
       <div className="another-wrapper">
         <div className="name-and-placement">
           <p>{props.index + 1}. </p>

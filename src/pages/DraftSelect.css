@@ -32,12 +32,17 @@
   justify-content: center;
 }
 
+.playerup-wrapper {
+  background: linear-gradient(0.25turn, rgb(249, 196, 5),  rgb(246, 230, 87));
+}
+
 .another-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 10px;
 }
+
 
 .name-and-placement {
   display: flex;
@@ -53,8 +58,8 @@
   height: 0; 
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  
   border-top: 10px solid rgb(245, 55, 178);
+  margin: 5px 0 0 0;
 }
 
 .show-stats:hover {
