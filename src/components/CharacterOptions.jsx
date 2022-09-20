@@ -1,7 +1,7 @@
 import CharacterDisplay from "./CharacterDisplay";
 
 const CharacterOptions = (props) => {
-  const characters = ["Yoshi", "Shy Guy", "Mario", "Bowser"]
+  const characters = ["Yoshi", "Shy Guy", "Mario", "Bowser", "Waluigi", "Peach"]
 
   return(
     <div className="character-component">

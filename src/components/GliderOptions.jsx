@@ -1,7 +1,7 @@
 import GliderDisplay from "./GliderDisplay";
 
 const GliderOptions = (props) => {
-  const gliders = ["Plane Glider", "Bowser Glider", "Flower Glider", "Gold Kite"]
+  const gliders = ["Plane Glider", "Bowser Glider", "Flower Glider", "Gold Kite", "Clouds", "Squirrel"]
   return(
     <div className="glider-component">
         {gliders.map((glider, index) => {

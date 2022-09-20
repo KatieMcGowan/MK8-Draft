@@ -1,6 +1,6 @@
 const Result = (props) => {
   return(
-    <div className="player-result">
+    <div className="player-result border-gradient border-gradient-rainbow">
       <p>{props.player.player}</p>
         <div className="player-build">
           <div className="selected">

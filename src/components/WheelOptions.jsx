@@ -1,7 +1,7 @@
 import WheelDisplay from "./WheelDisplay";
 
 const WheelOptions = (props) => {
-  const wheels = ["Azure Rollers", "Sponge", "Rollers", "Hylian Wheels"]
+  const wheels = ["Azure Rollers", "Sponge", "Rollers", "Hylian Wheels", "Mercedes Wheels", "Big Orange"]
 
   return(
     <div className="wheel-component">

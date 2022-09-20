@@ -11,7 +11,8 @@
 
 .results-container {
   display: flex; 
-  flex-direction: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .player-result {
@@ -21,9 +22,10 @@
   align-items: center;
   padding: 10px 0;
   margin: 10px;
-  border: solid 4px orangered;
   border-radius: 30px;
+  border: solid 4px orangered;
 }
+
 
 .player-build {
   display: flex;

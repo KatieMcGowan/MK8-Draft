@@ -1,7 +1,7 @@
 import KartDisplay from "./KartDisplay";
 
 const KartOptions = (props) => {
-  const karts = ["Biddybuggy", "Wild Wiggler", "Varmint", "Mercedes GLA"]
+  const karts = ["Biddybuggy", "Wild Wiggler", "Varmint", "Mercedes GLA", "Prancer", "Pipe Frame"]
 
   return(
     <div className="kart-component">

@@ -69,7 +69,7 @@ const DraftSelect = (props) => {
         count={count}
       />  
       <div className="draft-body">
-        <div className="draft-left">
+        <div className="draft-left border-gradient border-gradient-rainbow">
           <p className="turn-order-header">Turn Order</p>
           <div className="player-list">
             {players.map((player, index) => {
@@ -82,7 +82,7 @@ const DraftSelect = (props) => {
             })}
         </div>
       </div>  
-        <div className="draft-right">
+        <div className="draft-right border-gradient border-gradient-rainbow">
           {currentDraft === "Character" &&
             <CharacterOptions
               players={players}

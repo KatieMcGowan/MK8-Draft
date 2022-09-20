@@ -19,10 +19,18 @@
   flex-direction: row;
 }
 
+.border-gradient {
+  border: 4px solid;
+  border-image-slice: 1;
+}
+
+.border-gradient-rainbow {
+  border-image-source: linear-gradient(0.25turn, #d80b0b, #eb9c1b, #f3f63c, #49e71e, #2488eb, #8c1ae4);
+}
 
 .draft-left {
   width: 33.3%;
-  border: solid 5px purple;
+  /* border: solid 5px purple; */
   padding: 10px;
 }
 
@@ -86,7 +94,7 @@
   display: flex;
   flex-flow: row wrap;
   margin: 0 0 0 25px;
-  border: solid 5px plum
+  /* border: solid 5px plum */
 }
 
 .character-component {
