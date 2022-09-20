@@ -44,7 +44,12 @@
 }
 
 .playerup-wrapper {
+  padding: 10px;
   background: linear-gradient(0.25turn, rgb(249, 196, 5),  rgb(246, 230, 87));
+} 
+
+.player-wrapper {
+  padding: 10px;
 }
 
 .another-wrapper {
@@ -53,7 +58,6 @@
   justify-content: space-between;
   margin: 0 10px;
 }
-
 
 .name-and-placement {
   display: flex;
@@ -119,21 +123,26 @@
   flex-flow: row wrap;
 }
 
+.border-gradient-placeholder {
+  border-image-source: linear-gradient(0.25turn, rgb(246, 230, 87), rgb(249, 196, 5));
+}
+
 .placeholder-available {
-  background-color: pink;
   height: 75px;
   width: 100px;
   margin: 5px; 
   text-align: center;
 }
 
+.character-name {
+  padding: 26px 0;
+}
 .placeholder-available:hover {
   cursor: pointer;
   transform: scale(.9)
 }
 
 .placeholder-unavailable {
-  background-color: rgb(136, 131, 132);
   height: 75px;
   width: 100px;
   margin: 5px; 

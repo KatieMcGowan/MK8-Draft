@@ -85,7 +85,6 @@ const StartScreen = (props) => {
                   type="number"
                   min="2"
                   max="12"
-                  maxLength="2"
                   name="number"
                   value={numberInput.number}
                   required={true}

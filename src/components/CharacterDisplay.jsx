@@ -16,8 +16,8 @@ const CharacterDisplay = (props) => {
   return(
     <div className=
     {available === true
-      ? "placeholder-available"
-      : "placeholder-unavailable"
+      ? "placeholder-available border-gradient border-gradient-placeholder"
+      : "placeholder-unavailable border-gradient"
     } onClick={() => handleSelect()}>
       <p className="character-name">{props.character}</p>
     </div>
