@@ -24,7 +24,12 @@ const DraftPlayer = (props) => {
           <p>{props.player.player}</p>
         </div>
         <div className="toggle-stats">
-          <div className="show-stats" onClick={(() => toggleDisplay())}></div>
+          <div className=
+            {display === false
+            ? "show-stats" 
+            : "hide-stats"
+            }
+          onClick={(() => toggleDisplay())}></div>
         </div>
       </div>  
       {display === true &&

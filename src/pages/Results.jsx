@@ -1,3 +1,4 @@
+import Result from "../components/Result"
 import "./Results.css"
 
 const Results = (props) => {
@@ -6,48 +7,12 @@ const Results = (props) => {
     <div className="results-wrapper">
       <p className="results-header">Results</p>
       <div className="results-container">
-        <div className="player-result">
-          <p>Becky</p>
-          <div className="player-build">
-            <div className="selected">
-              <div className="results-placeholder"></div>
-              <p className="character">Yoshi</p>
-            </div>
-            <div className="selected">
-              <div className="results-placeholder"></div>
-              <p className="kart">Biddybuggy</p>
-            </div>
-            <div className="selected">
-              <div className="results-placeholder"></div>
-              <p className="wheels">Azure Roller</p>
-            </div>
-            <div className="selected">
-              <div className="results-placeholder"></div>
-              <p className="glider">Flower Glider</p>
-            </div>
-          </div>
-        </div>
-        <div className="player-result">
-          <p>Becky</p>
-          <div className="player-build">
-            <div className="selected">
-              <div className="results-placeholder"></div>
-              <p className="character">Yoshi</p>
-            </div>
-            <div className="selected">
-              <div className="results-placeholder"></div>
-              <p className="kart">Biddybuggy</p>
-            </div>
-            <div className="selected">
-              <div className="results-placeholder"></div>
-              <p className="wheels">Azure Roller</p>
-            </div>
-            <div className="selected">
-              <div className="results-placeholder"></div>
-              <p className="glider">Flower Glider</p>
-            </div>
-          </div>
-        </div>
+        {props.players.map((player, index) => {
+          return <Result
+                  key={index}
+                  player={player}
+                />
+        })}
       </div>
     </div>
   );

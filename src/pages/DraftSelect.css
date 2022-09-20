@@ -67,6 +67,19 @@
   transform: scale(1.1)
 }
 
+.hide-stats {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgb(245, 55, 178);
+  margin: 5px 0 0 0;
+}
+
+.hide-stats:hover {
+  cursor: pointer;
+  transform: scale(1.1)
+}
 
 .draft-right {
   width: 66.6%;
