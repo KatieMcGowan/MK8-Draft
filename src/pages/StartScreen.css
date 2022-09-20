@@ -90,6 +90,44 @@ input {
   text-align: center;
 }
 
+.reverse-placement-button {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: linear-gradient(0.25turn, rgb(246, 230, 87), rgb(249, 196, 5));
+  margin: 20px 0;
+}
+
+.reverse-placement-button:after {
+  content: "";
+  position: absolute;
+  right: 0; 
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+} 
+
+.reverse-placement-button:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 20px solid rgb(246, 230, 87);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.reverse-placement-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
 .placement-buttons {
   width: 200px;
   height: 40px;

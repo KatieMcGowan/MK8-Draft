@@ -9,8 +9,6 @@ import Results from './pages/Results';
 const App = () => {
   const [players, setPlayers] = useState([])
 
-  console.log(players)
-
   return (
     <div className="App">
       <Header />

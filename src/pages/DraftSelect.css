@@ -28,6 +28,10 @@
   border-image-source: linear-gradient(0.25turn, #d80b0b, #eb9c1b, #f3f63c, #49e71e, #2488eb, #8c1ae4);
 }
 
+.border-gradient-reverse-rainbow {
+  border-image-source: linear-gradient(0.25turn, #8c1ae4, #2488eb, #49e71e, #f3f63c, #eb9c1b, #d80b0b);
+}
+
 .draft-left {
   width: 33.3%;
   /* border: solid 5px purple; */

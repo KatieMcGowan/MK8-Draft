@@ -7,6 +7,9 @@ const StartScreenPlayerInput = (props) => {
       <input className="player-name"
         type="text"
         name="player"
+        minLength="1"
+        maxLength="10"
+        required={true}
         value={props.player.player}
         onChange={event => props.handleNameInput(props.index, event)}
       />  

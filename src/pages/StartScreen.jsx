@@ -97,7 +97,7 @@ const StartScreen = (props) => {
         </form>
       : <div className="conditional-wrapper">
         <div className="players-wrapper-headers">
-          <p className="name-label">Type in players names in order of first place to last place</p>
+          <p className="name-label">Type in players names in order of first place to last place from last session.</p>
         </div>  
         <div className="players-wrapper">
           {players.map((player, index) => {
@@ -110,10 +110,10 @@ const StartScreen = (props) => {
               />  
             )
           })}
-          <p className="more-players" onClick={() => toggleDisplay()}>Wait, more players showed up</p> 
+          <div className="reverse-placement-button" onClick={() => toggleDisplay()}><p className="draft-text">Change player count</p></div> 
         </div>   
         <div className="placement-options-wrapper">
-            <p className="placement-options-text">Once all players names are typed in, select one of the draft options below to start the draft</p>
+            <p className="placement-options-text">Once all players names are typed in, select one of the draft options below to start the draft!</p>
             <div className="placement-options">
               <div className="placement-buttons" onClick={() => winnersGoFirst()}><p className="draft-text">Previous winners go first</p></div>
               <div className="placement-buttons" onClick={() => losersGoFirst()}><p className="draft-text">Previous losers go first</p></div>
