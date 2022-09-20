@@ -50,7 +50,7 @@
 }
 
 .player-draft-picks {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 25px;
 }
 
 .show-stats {
@@ -76,9 +76,43 @@
   border: solid 5px plum
 }
 
-.placeholder {
+.character-component {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.kart-component {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.wheel-component {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.glider-component {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.placeholder-available {
   background-color: pink;
   height: 75px;
   width: 100px;
-  margin: 5px;
+  margin: 5px; 
+  text-align: center;
+}
+
+.placeholder-available:hover {
+  cursor: pointer;
+  transform: scale(.9)
+}
+
+.placeholder-unavailable {
+  background-color: rgb(136, 131, 132);
+  height: 75px;
+  width: 100px;
+  margin: 5px; 
+  text-align: center;
 }

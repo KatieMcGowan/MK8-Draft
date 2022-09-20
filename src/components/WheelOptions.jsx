@@ -1,26 +1,21 @@
+import WheelDisplay from "./WheelDisplay";
+
 const WheelOptions = (props) => {
-  //Should be 18
+  const wheels = ["Azure Rollers", "Sponge", "Rollers", "Hylian Wheels"]
+
   return(
     <div className="wheel-component">
-      <p>Wheel</p>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
+        {wheels.map((wheel, index) => {
+          return <WheelDisplay
+                  index={index}
+                  key={index}
+                  wheel={wheel}
+                  playerIndex={props.playerIndex}
+                  players={props.players}
+                  playerUp={props.playerUp}
+                  setCount={props.setCount}
+                />  
+        })}
     </div>  
   );
 };

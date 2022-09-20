@@ -1,65 +1,23 @@
+import CharacterDisplay from "./CharacterDisplay";
+
 const CharacterOptions = (props) => {
+  const characters = ["Yoshi", "Shy Guy", "Mario", "Bowser"]
 
-  //onclick = {() => reset timer to 30, push character name into player object}
-
-  //should be 41 total
   return(
     <div className="character-component">
-      <p onClick={() => props.setOption("kart")}>Character</p>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
+        {characters.map((character, index) => {
+          return <CharacterDisplay
+                  index={index}
+                  key={index}
+                  character={character}
+                  playerIndex={props.playerIndex}
+                  players={props.players}
+                  playerUp={props.playerUp}
+                  setCount={props.setCount}
+                />  
+        })}
     </div>
   );
 };
 
-export default CharacterOptions
-
-//Array with 4 arrays of objects
-
-//example = [
-//   [
-//     {kart: "biddybuggy"}
-//   ]
-//   [
-//     {character: "bowser"}
-//   ]
-// ]
+export default CharacterOptions;

@@ -1,20 +1,20 @@
+import GliderDisplay from "./GliderDisplay";
+
 const GliderOptions = (props) => {
-  //Should be 12;
+  const gliders = ["Plane Glider", "Bowser Glider", "Flower Glider", "Gold Kite"]
   return(
     <div className="glider-component">
-      <p>Glider</p>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
+        {gliders.map((glider, index) => {
+          return <GliderDisplay
+                  index={index}
+                  key={index}
+                  glider={glider}
+                  playerIndex={props.playerIndex}
+                  players={props.players}
+                  playerUp={props.playerUp}
+                  setCount={props.setCount}
+                />  
+        })}
     </div>
   );
 };

@@ -17,7 +17,7 @@ const DraftSelect = (props) => {
   
   const [playerUp, setPlayerUp] = useState(props.players[0]);
 
-  const [index, setIndex] = useState(0)
+  const [playerIndex, setPlayerIndex] = useState(0)
 
   //STATES TO SWITCH CATEGORY COMPONENTS
   const [draftCategories, setCategories] = useState(["Character", "Kart", "Wheels", "Glider"]);
@@ -26,27 +26,27 @@ const DraftSelect = (props) => {
 
   const [categoryIndex, setCategoryIndex] = useState(0)
 
-  //USEEFFECT HOOKS TO ITERATE OVER PLAYER AND CATEGORY STATES AS TIMER PROGRESSES
-  // useEffect(() => {
-  //   if (count <= 0) return;
-  //   const countdown = setInterval(() => {
-  //     setCount(count - 1)
-  //   }, 1000);
-  //   return () => clearInterval(countdown)
-  // }, [count])
+  // USEEFFECT HOOKS TO ITERATE OVER PLAYER AND CATEGORY STATES AS TIMER PROGRESSES
+  useEffect(() => {
+    if (count <= 0) return;
+    const countdown = setInterval(() => {
+      setCount(count - 1)
+    }, 1000);
+    return () => clearInterval(countdown)
+  }, [count])
 
   useEffect(() => {
-    if (count === 0 && index < players.length - 1) {
-      setIndex(index + 1)
-    } else if (count === 0 && index === players.length - 1) {
-      setIndex(0)
+    if (count === 0 && playerIndex < players.length - 1) {
+      setPlayerIndex(playerIndex + 1)
+    } else if (count === 0 && playerIndex === players.length - 1) {
+      setPlayerIndex(0)
       setCategoryIndex(categoryIndex + 1)
     }
   }, [count])
 
   useEffect(() => {
-    setPlayerUp(players[index])
-  }, [index])
+    setPlayerUp(players[playerIndex])
+  }, [playerIndex])
 
   useEffect(() => {
     setCount(5)
@@ -64,10 +64,6 @@ const DraftSelect = (props) => {
   return(
     <div className="draft-wrapper">
       <DraftHeader
-        // players={props.players}
-        // draft={currentDraft}
-        // setDraft={setDraft}
-        // draftCategories={draftCategories}
         currentDraft={currentDraft}
         playerUp={playerUp}
         count={count}
@@ -89,30 +85,38 @@ const DraftSelect = (props) => {
         <div className="draft-right">
           {currentDraft === "Character" &&
             <CharacterOptions
-              setDraft={setDraft}
-              draftCategories={setCategories}
               players={players}
+              setPlayers={setPlayers}
+              setCount={setCount}
+              playerUp={playerUp}
+              playerIndex={playerIndex}
             />  
           }
           {currentDraft === "Kart" &&
             <KartOptions
-              setDraft={setDraft}
-              draftCategories={setCategories}
               players={players}
+              setPlayers={setPlayers}
+              setCount={setCount}
+              playerUp={playerUp}
+              playerIndex={playerIndex}
             />
           }
           {currentDraft === "Wheels" &&
             <WheelOptions
-              setDraft={setDraft}
-              draftCategories={setCategories}
               players={players}
+              setPlayers={setPlayers}
+              setCount={setCount}
+              playerUp={playerUp}
+              playerIndex={playerIndex}
             />
           }
           {currentDraft === "Glider" &&
             <GliderOptions
-              setDraft={setDraft}
-              draftCategories={setCategories}
               players={players}
+              setPlayers={setPlayers}
+              setCount={setCount}
+              playerUp={playerUp}
+              playerIndex={playerIndex}
             />
           }
         </div>  

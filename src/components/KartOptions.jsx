@@ -1,31 +1,21 @@
+import KartDisplay from "./KartDisplay";
+
 const KartOptions = (props) => {
-//Should be 23
+  const karts = ["Biddybuggy", "Wild Wiggler", "Varmint", "Mercedes GLA"]
+
   return(
     <div className="kart-component">
-      <p>Kart</p>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
-      <div className="placeholder"></div>
+        {karts.map((kart, index) => {
+          return <KartDisplay
+                  index={index}
+                  key={index}
+                  kart={kart}
+                  playerIndex={props.playerIndex}
+                  players={props.players}
+                  playerUp={props.playerUp}
+                  setCount={props.setCount}
+                />  
+        })}
     </div>
   );
 };
