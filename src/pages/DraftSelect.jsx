@@ -10,7 +10,7 @@ import "./DraftSelect.css"
 
 const DraftSelect = (props) => {
   //STATE FOR DRAFT COUNTDOWN
-  const [count, setCount] = useState(5)
+  const [count, setCount] = useState(30)
 
   //STATES TO ITERATE THROUGH PLAYERS ARRAY
   const [players, setPlayers] = useState(props.players);
@@ -49,7 +49,7 @@ const DraftSelect = (props) => {
   }, [playerIndex])
 
   useEffect(() => {
-    setCount(5)
+    setCount(30)
   }, [playerUp])
 
   let navigate = useNavigate()

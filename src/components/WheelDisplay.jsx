@@ -5,7 +5,7 @@ const WheelDisplay = (props) => {
 
   const handleSelect = () => {
     if (available === true) {
-      props.players[props.playerIndex] = {player: props.playerUp.player, character: props.playerUp.character, wheel: props.wheel}
+      props.players[props.playerIndex] = {player: props.playerUp.player, character: props.playerUp.character, kart: props.playerUp.kart, wheel: props.wheel}
       props.setCount(0)
       setAvailable(false)
     } else {

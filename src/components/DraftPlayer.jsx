@@ -2,12 +2,6 @@
 import React, { useState } from "react"
 
 const DraftPlayer = (props) => {
-//player object = {
-//   index: Number,
-//   player: {player: name}
-//   selections: [Yoshi, Biddybuggy, Azure Rollers, Flower Glider]
-// }
-
   const [display, setDisplay] = useState(false);
 
   const toggleDisplay = () => {
@@ -35,10 +29,10 @@ const DraftPlayer = (props) => {
       </div>  
       {display === true &&
       <div className="player-draft-picks">
-          <p>Character: Yoshi</p>
-          <p>Kart: Biddybuggy</p>
-          <p>Wheels: Azure rollers</p>
-          <p>Glider: Flower glider</p>
+          <p>Character: {props.player.character}</p>
+          <p>Kart: {props.player.kart}</p>
+          <p>Wheels: {props.player.wheel}</p>
+          <p>Glider: {props.player.glider}</p>
         </div>
       }
     </div>
@@ -46,3 +40,5 @@ const DraftPlayer = (props) => {
 };
 
 export default DraftPlayer;
+
+//Kart gets overriden in this display when you select wheels
