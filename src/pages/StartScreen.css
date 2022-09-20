@@ -23,6 +23,7 @@ label {
 }
 
 input {
+  font-family: 'Noto Sans JP', sans-serif;
   padding: 3px 0 3px 3px ;
 }
 
@@ -43,10 +44,10 @@ input {
 
 .more-players {
   font-family: 'Noto Sans JP', sans-serif;
-  width: 250px;
+  width: 200px;
   align-self: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   margin: 20px 0;
   background: linear-gradient(0.25turn, rgb(249, 196, 5),  rgb(246, 230, 87));
   border: solid 3px rgb(249, 159, 14)
@@ -174,5 +175,10 @@ input {
   .placement-options-text {
     font-size: 16px;
     max-width: 300px;
+  }
+
+  .more-players {
+    font-size: 14px;
+    width: 225px;
   }
 }

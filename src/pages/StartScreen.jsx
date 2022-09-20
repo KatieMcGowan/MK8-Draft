@@ -53,7 +53,7 @@ const StartScreen = (props) => {
   const winnersGoFirst = () => {
     props.setPlayers(players)
     navigate("/draft")
-  }
+  };
 
   const losersGoFirst = () => {
     let sortedPlayers = []
@@ -62,18 +62,16 @@ const StartScreen = (props) => {
     }
     props.setPlayers(sortedPlayers)
     navigate("/draft")
-  }
+  };
 
-  // const randomize = (array)  => {
-  //   let sortedPlayers = []
-  //   for (let i = array.length - 1; i > 0; i--) {
-  //     const j = Math.floor(Math.random() * (i + 1));
-  //     [array[i], array[j]] = [array[j], array[i]];
-  //     sortedPlayers.push(array[i])
-  //   }
-  //   props.setPlayers(sortedPlayers);
-  // }
-
+  const randomize = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    };
+    props.setPlayers(array);
+    navigate("/draft")
+  };
 
   return(
     <div className="startscreen-wrapper">
@@ -112,14 +110,14 @@ const StartScreen = (props) => {
               />  
             )
           })}
-          <p className="more-players" onClick={() => toggleDisplay()}>Wait, more players showed up.</p> 
+          <p className="more-players" onClick={() => toggleDisplay()}>Wait, more players showed up</p> 
         </div>   
         <div className="placement-options-wrapper">
             <p className="placement-options-text">Once all players names are typed in, select one of the draft options below to start the draft</p>
             <div className="placement-options">
               <div className="placement-buttons" onClick={() => winnersGoFirst()}><p className="draft-text">Previous winners go first</p></div>
               <div className="placement-buttons" onClick={() => losersGoFirst()}><p className="draft-text">Previous losers go first</p></div>
-              {/* <div className="placement-buttons"><p className="draft-text">Randomize placement</p></div> */}
+              <div className="placement-buttons" onClick={() => randomize(players)}><p className="draft-text">Randomize placement</p></div>
             </div>
           </div> 
         </div>
