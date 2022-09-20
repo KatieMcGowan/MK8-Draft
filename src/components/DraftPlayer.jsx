@@ -18,7 +18,6 @@ const DraftPlayer = (props) => {
     }
   }
 
-  console.log(props);
   return(
     <div className="player-wrapper">
       <div className="another-wrapper">

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DraftCounter = (props) => {
+  //STATES TO ITERATE THROUGH PLAYERS ON TIMER
   const [players, setPlayers] = useState(props.players);
   
   const [index, setIndex] = useState(0)
@@ -9,14 +11,15 @@ const DraftCounter = (props) => {
 
   const [count, setCount] = useState(5)
 
-  // const [selection, setSelection] = ["Character", "Kart", "Wheels", "Glider"]
+  //STATE TO SWITCH CATEGORY COMPONENTS
+  const [categoryIndex, setCategoryIndex] = useState(0)
 
+  //USEEFFECT HOOKS TO ITERATE OVER PLAYER AND CATEGORY STATES AS TIMER PROGRESSES
   useEffect(() => {
     if (count <= 0) return;
     const countdown = setInterval(() => {
       setCount(count - 1)
     }, 1000);
-    console.log(count);
     return () => clearInterval(countdown)
   }, [count])
 
@@ -25,6 +28,7 @@ const DraftCounter = (props) => {
       setIndex(index + 1)
     } else if (count === 0 && index === players.length - 1) {
       setIndex(0)
+      setCategoryIndex(categoryIndex + 1)
     }
   }, [count])
 
@@ -36,17 +40,22 @@ const DraftCounter = (props) => {
     setCount(5)
   }, [playerUp])
 
+  let navigate = useNavigate()
+  useEffect(() => {
+    if (categoryIndex < props.draftCategories.length) {
+      props.setDraft(props.draftCategories[categoryIndex])
+    } else if (categoryIndex === props.draftCategories.length) {
+      navigate("/results")
+    } 
+  },[categoryIndex])
 
   
   return(
     <div className="draft-header">
-      <p className="category-selection">Character Selection: {count} seconds</p>
+      <p className="category-selection">{props.draft} Selection: {count} seconds</p>
       <p className="player-turn">{playerUp.player}'s Turn</p>
-      <p>Incrementer</p>
     </div>
   );
 };
 
 export default DraftCounter;
-
-//Switches name after 1 minute, then switches 30s.
