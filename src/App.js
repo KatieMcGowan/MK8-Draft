@@ -18,7 +18,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route exact path={"/"} element={<StartScreen setPlayers={setPlayers}/>} />
-        <Route path={"/draft"} element={<DraftSelect players={players} setPlayers={setPlayers}/>} />
+        <Route path={"/draft"} element={<DraftSelect players={players} setPlayers={setPlayers} data={data}/>} />
         <Route path={"/results"} element={<Results players={players} setPlayers={setPlayers}/>} />
         <Route path={"/databasetesting"} element={<DatabaseTesting data={data}/>} />
       </Routes>

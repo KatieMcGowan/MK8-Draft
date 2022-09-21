@@ -4,11 +4,11 @@ const CharacterDisplay = (props) => {
   const [available, setAvailable] = useState(true);
 
   useEffect(() => {
-    if (props.characterIndex === props.index){
-      setAvailable(false);
-      console.log("Character made unavailable");
-    } 
-  }, [props.characterIndex])
+    if (props.autoIndex === props.index) {
+      console.log(props.character + "'s index is the same as autoindex, should be highlighted");
+      setAvailable(false)
+    };
+  }, [props.autoIndex])
 
   const handleSelect = () => {
     if (available === true) {

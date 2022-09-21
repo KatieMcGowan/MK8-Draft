@@ -2,18 +2,52 @@ import { useState, useEffect } from "react";
 import CharacterDisplay from "./CharacterDisplay";
 
 const CharacterOptions = (props) => {
-  const characters = ["Yoshi", "Shy Guy", "Mario", "Bowser", "Waluigi", "Peach"]
+  //ORIGINAL CHARACTER DATA FOR MAPPING ACROSS COMPONENTS
+  const [characters, setCharacters] = useState(["Yoshi", "Shy Guy", "Mario", "Bowser", "Waluigi", "Peach"])
 
-  const [characterIndex, setCharacterIndex] = useState()
+  //TEST STATES AND FUNCTIONS FOR AUTODRAFT
+  const [availableCharacters, setAvailable] = useState(characters.slice(0))
+
+  const [arrayOfIndexes, setArray] = useState([0,1,2,3,4,5])
+
+  const [autoIndex, setAutoIndex] = useState()
+
+  const handleAutoSelect = () => {
+    setAutoIndex(arrayOfIndexes[0])
+    arrayOfIndexes.splice(0,1)
+    setArray(arrayOfIndexes)
+    availableCharacters.splice(autoIndex, 1)
+    setAvailable(availableCharacters)
+    setAutoIndex(arrayOfIndexes[0])
+  };
+
+  // const handleUserSelect = (num) => {
+    //send component index back up. 
+
+  // }
+
+  const randomize = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    };
+    setArray(array);
+  };
 
   useEffect(() => {
-    if (props.count === 0 && !props.playerUp.character) {
-      let random = Math.floor(Math.random() * characters.length);
-      setCharacterIndex(random);
-      console.log(characterIndex);
-      props.players[props.playerIndex] = {player: props.playerUp.player, character: characters[random]};
+    if (availableCharacters.length === characters.length) {
+      randomize(arrayOfIndexes);
     };
-  }, [props.count])
+  }, [availableCharacters, characters]);
+
+  //Steps 
+    //arrayofIndexes is randomized
+    //0 index of array of indexes is set to autoIndex, making it a random number between 0 - 5
+    //On autodraft, that first index is spliced off, leaving 5 indexes
+    //The available character located at that index is spliced off, leaving 5 indexes
+    //props.autoindex === props.index
+
+
 
   return(
     <div className="character-component">
@@ -21,14 +55,15 @@ const CharacterOptions = (props) => {
           return <CharacterDisplay
                   index={index}
                   key={index}
-                  characterIndex={characterIndex}
                   character={character}
                   playerIndex={props.playerIndex}
                   players={props.players}
                   playerUp={props.playerUp}
                   setCount={props.setCount}
+                  autoIndex={autoIndex}
                 />  
         })}
+        <button onClick={() => handleAutoSelect()}>Test</button>
     </div>
   );
 };

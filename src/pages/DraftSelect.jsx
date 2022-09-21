@@ -10,7 +10,7 @@ import "./DraftSelect.css"
 
 const DraftSelect = (props) => {
   //STATE FOR DRAFT COUNTDOWN
-  const [count, setCount] = useState(5)
+  const [count, setCount] = useState(10)
 
   //STATES TO ITERATE THROUGH PLAYERS ARRAY
   const [players, setPlayers] = useState(props.players);
@@ -27,13 +27,13 @@ const DraftSelect = (props) => {
   const [categoryIndex, setCategoryIndex] = useState(0)
 
   // USEEFFECT HOOKS TO ITERATE OVER PLAYER AND CATEGORY STATES AS TIMER PROGRESSES
-  useEffect(() => {
-    if (count <= 0) return;
-    const countdown = setInterval(() => {
-      setCount(count - 1)
-    }, 1000);
-    return () => clearInterval(countdown)
-  }, [count])
+  // useEffect(() => {
+  //   if (count <= 0) return;
+  //   const countdown = setInterval(() => {
+  //     setCount(count - 1)
+  //   }, 1000);
+  //   return () => clearInterval(countdown)
+  // }, [count])
 
   useEffect(() => {
     if (count === 0 && playerIndex < players.length - 1) {
@@ -49,7 +49,7 @@ const DraftSelect = (props) => {
   }, [playerIndex])
 
   useEffect(() => {
-    setCount(5)
+    setCount(10)
   }, [playerUp])
 
   let navigate = useNavigate()
