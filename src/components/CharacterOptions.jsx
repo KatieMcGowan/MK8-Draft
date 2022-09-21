@@ -3,51 +3,41 @@ import CharacterDisplay from "./CharacterDisplay";
 
 const CharacterOptions = (props) => {
   //ORIGINAL CHARACTER DATA FOR MAPPING ACROSS COMPONENTS
-  const [characters, setCharacters] = useState(["Yoshi", "Shy Guy", "Mario", "Bowser", "Waluigi", "Peach"])
+  const [characters, setCharacters] = useState(["Yoshi", "Shy Guy", "Mario", "Bowser", "Waluigi", "Peach", "Dry Bowser", "Toad", "Luigi", "Wario", "Lakitu", "Morton"])
 
-  //TEST STATES AND FUNCTIONS FOR AUTODRAFT
-  const [availableCharacters, setAvailable] = useState(characters.slice(0))
+  //STATES FOR AUTODRAFT
+  const [ghostCharacters, setGhosts] = useState(characters.slice(0));
 
-  const [arrayOfIndexes, setArray] = useState([0,1,2,3,4,5])
+  const [drafted, setDrafted] = useState()
 
-  const [autoIndex, setAutoIndex] = useState()
+  //FUNCTIONS FOR AUTODRAFT
+  const randomIndex = () => {
+    let random = Math.floor(Math.random() * ghostCharacters.length);
+    return random;
+  }
 
   const handleAutoSelect = () => {
-    setAutoIndex(arrayOfIndexes[0])
-    arrayOfIndexes.splice(0,1)
-    setArray(arrayOfIndexes)
-    availableCharacters.splice(autoIndex, 1)
-    setAvailable(availableCharacters)
-    setAutoIndex(arrayOfIndexes[0])
+    let random = randomIndex();
+    props.players[props.playerIndex] = {player: props.playerUp.player, character: ghostCharacters[random]}
+    setDrafted(ghostCharacters[random])
+    ghostCharacters.splice(random, 1)
   };
 
-  // const handleUserSelect = (num) => {
-    //send component index back up. 
-
-  // }
-
-  const randomize = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    };
-    setArray(array);
-  };
-
+  //INITIALIZES AUTODRAFT WHEN COUNT HITS 0
   useEffect(() => {
-    if (availableCharacters.length === characters.length) {
-      randomize(arrayOfIndexes);
+    if (props.count === 0 && !props.playerUp.character) {
+      handleAutoSelect();
     };
-  }, [availableCharacters, characters]);
+  }, [props.count])
 
-  //Steps 
-    //arrayofIndexes is randomized
-    //0 index of array of indexes is set to autoIndex, making it a random number between 0 - 5
-    //On autodraft, that first index is spliced off, leaving 5 indexes
-    //The available character located at that index is spliced off, leaving 5 indexes
-    //props.autoindex === props.index
-
-
+  //USER SELECT FUNCTION
+  const handleUserSelect = (name) => {
+    for (let i = 0; i < ghostCharacters.length; i++) {
+      if (name === ghostCharacters[i]) {
+        ghostCharacters.splice(i, 1)
+      };
+    };
+  };;
 
   return(
     <div className="character-component">
@@ -60,10 +50,10 @@ const CharacterOptions = (props) => {
                   players={props.players}
                   playerUp={props.playerUp}
                   setCount={props.setCount}
-                  autoIndex={autoIndex}
+                  drafted={drafted}
+                  handleUserSelect={handleUserSelect}
                 />  
         })}
-        <button onClick={() => handleAutoSelect()}>Test</button>
     </div>
   );
 };

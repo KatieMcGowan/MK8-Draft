@@ -3,16 +3,17 @@ import React, { useState, useEffect } from "react";
 const CharacterDisplay = (props) => {
   const [available, setAvailable] = useState(true);
 
+  //MAKES CHARACTER UNAVAILABLE IF CHARACTER HAS BEEN AUTODRAFTED
   useEffect(() => {
-    if (props.autoIndex === props.index) {
-      console.log(props.character + "'s index is the same as autoindex, should be highlighted");
+    if (props.drafted === props.character) {
       setAvailable(false)
     };
-  }, [props.autoIndex])
+  }, [props.drafted])
 
   const handleSelect = () => {
     if (available === true) {
       props.players[props.playerIndex] = {player: props.playerUp.player, character: props.character};
+      props.handleUserSelect(props.character);
       props.setCount(0);
       setAvailable(false);
     } else {
