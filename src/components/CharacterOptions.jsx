@@ -25,19 +25,22 @@ const CharacterOptions = (props) => {
 
   //INITIALIZES AUTODRAFT WHEN COUNT HITS 0
   useEffect(() => {
-    if (props.count === 0 && !props.playerUp.character) {
+    if (props.count === 1 && !props.playerUp.character) {
       handleAutoSelect();
     };
   }, [props.count])
 
   //USER SELECT FUNCTION
   const handleUserSelect = (name) => {
+    console.log(name);
     for (let i = 0; i < ghostCharacters.length; i++) {
       if (name === ghostCharacters[i]) {
         ghostCharacters.splice(i, 1)
       };
     };
-  };;
+  };
+
+  console.log(ghostCharacters)
 
   return(
     <div className="character-component">
