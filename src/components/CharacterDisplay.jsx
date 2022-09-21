@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const CharacterDisplay = (props) => {
   const [available, setAvailable] = useState(true);
+
+  useEffect(() => {
+    if (props.characterIndex === props.index){
+      setAvailable(false);
+      console.log("Character made unavailable");
+    } 
+  }, [props.characterIndex])
 
   const handleSelect = () => {
     if (available === true) {
