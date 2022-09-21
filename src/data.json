@@ -1,0 +1,26 @@
+[
+  [
+      {
+        "name": "Mario",
+        "img": "images/characters/mario.png"
+      }
+    ],
+  [
+      {
+        "name": "Standard Kart",
+        "img": "images/vehicles/standardkart.png"
+      }
+    ],
+  [
+      {
+        "name": "Standard",
+        "img": "images/wheels/standard.png"
+      }
+    ],
+  [
+      {
+        "name": "Super Glider",
+        "img": "images/gliders/superglider.png"
+      }
+  ]
+]
