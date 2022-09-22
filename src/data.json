@@ -315,6 +315,70 @@
       {
         "name": "Slick",
         "img": "images/wheels/slick.png"
+      },
+      {
+        "name": "Metal",
+        "img": "images/wheels/metal.png"
+      },
+      {
+        "name": "Button",
+        "img": "images/wheels/button.png"
+      },
+      {
+        "name": "Off-Road",
+        "img": "images/wheels/offroad.png"
+      },
+      {
+        "name": "Sponge",
+        "img": "images/wheels/sponge.png"
+      },
+      {
+        "name": "Wood",
+        "img": "images/wheels/wood.png"
+      },
+      {
+        "name": "Cushion",
+        "img": "images/wheels/cushion.png"
+      },
+      {
+        "name": "Blue Standard",
+        "img": "images/wheels/bluestandard.png"
+      },
+      {
+        "name": "Hot Monster",
+        "img": "images/wheels/hotmonster.png"
+      },
+      {
+        "name": "Azure Roller",
+        "img": "images/wheels/azureroller.png"
+      },
+      {
+        "name": "Crimson Slim",
+        "img": "images/wheels/crimsonslim.png"
+      },
+      {
+        "name": "Cyber Slick",
+        "img": "images/wheels/cyberslick.png"
+      },
+      {
+        "name": "Retro Off-Road",
+        "img": "images/wheels/retrooffroad.png"
+      },
+      {
+        "name": "Gold Tires",
+        "img": "images/wheels/goldtires.png"
+      },
+      {
+        "name": "GLA Tires",
+        "img": "images/wheels/glatires.png"
+      },
+      {
+        "name": "Triforce Tires",
+        "img": "images/wheels/triforcetires.png"
+      },
+      {
+        "name": "Leaf Tires",
+        "img": "images/wheels/leaftires.png"
       }
     ],
   [
