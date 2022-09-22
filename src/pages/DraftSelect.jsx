@@ -100,6 +100,7 @@ const DraftSelect = (props) => {
               setCount={setCount}
               playerUp={playerUp}
               playerIndex={playerIndex}
+              count={count}
             />
           }
           {currentDraft === "Wheels" &&
@@ -109,6 +110,7 @@ const DraftSelect = (props) => {
               setCount={setCount}
               playerUp={playerUp}
               playerIndex={playerIndex}
+              count={count}
             />
           }
           {currentDraft === "Glider" &&
@@ -118,6 +120,7 @@ const DraftSelect = (props) => {
               setCount={setCount}
               playerUp={playerUp}
               playerIndex={playerIndex}
+              count={count}
             />
           }
         </div>  

@@ -23,7 +23,7 @@ const CharacterOptions = (props) => {
     ghostCharacters.splice(random, 1)
   };
 
-  //INITIALIZES AUTODRAFT WHEN COUNT HITS 0
+  //INITIALIZES AUTODRAFT WHEN COUNT HITS 1
   useEffect(() => {
     if (props.count === 1 && !props.playerUp.character) {
       handleAutoSelect();
@@ -39,8 +39,6 @@ const CharacterOptions = (props) => {
       };
     };
   };
-
-  console.log(ghostCharacters)
 
   return(
     <div className="character-component">
