@@ -4,6 +4,14 @@
   flex-direction: column;
 }
 
+.category-selection {
+  font-size: 22px;
+}
+
+.player-turn {
+  font-size: 18px;
+}
+
 .draft-header {
   align-self: center;
   text-align: center;
@@ -13,6 +21,7 @@
 .turn-order-header{
   margin: 0 0 10px 0;
   text-align: center;
+  font-size: 18px; 
 }
 
 .draft-body {
@@ -66,7 +75,6 @@
 }
 
 .player-draft-picks {
-  /* margin: 0 0 0 25px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -82,7 +90,10 @@
 
 .turn-order-choices {
   font-size: 13px;
-  /* max-width: 70px; */
+}
+
+.unpicked {
+  font-size: 38px;
 }
 
 .show-stats {
@@ -117,6 +128,7 @@
   width: 75%;
   display: flex;
   flex-flow: row wrap;
+  align-items: flex-start;
   margin: 0 0 0 25px;
 }
 
@@ -150,6 +162,7 @@
   margin: 5px; 
   padding: 10px;
   text-align: center;
+  justify-content: center; 
 }
 
 .character-name {
@@ -166,10 +179,8 @@
   margin: 5px; 
   padding: 10px;
   text-align: center;
-}
-
-img {
-  margin: 20px 0 0 0;
+  background-color: gray; 
+  opacity: 0.33;
 }
 
 .draft-name {
@@ -178,6 +189,6 @@ img {
 
 @media (min-width: 600px){
   .draft-name {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

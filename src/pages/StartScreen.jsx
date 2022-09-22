@@ -106,17 +106,18 @@ const StartScreen = (props) => {
         <form onSubmit={handlePlayers}>
           <div className="draft-setup-questions">
             <div className="how-many-players-wrapper">
-                <label htmlFor="players">How many players are in your lobby?</label>
-                <input
-                  className="players-input"
-                  type="number"
-                  min="2"
-                  max="12"
-                  name="number"
-                  value={numberInput.number}
-                  required={true}
-                  onChange={handleChange}
-                />  
+              <p className="name-label">Welcome to the MK8 Deluxe Draft! Please respond to the following prompts for draft set-up. At that point, the draft will begin.</p>
+              <label htmlFor="players">How many players are in your lobby?</label>
+              <input
+                className="players-input"
+                type="number"
+                min="2"
+                max="12"
+                name="number"
+                value={numberInput.number}
+                required={true}
+                onChange={handleChange}
+              />  
             </div>
           <input type="submit" className="letsa-go" value="Letsa Go!"/>
           </div>
@@ -125,11 +126,11 @@ const StartScreen = (props) => {
       {displayTwo === true && 
         <div className="conditional-wrapper">
           <div className="players-wrapper-headers">
-            <p className="name-label">Type in players names in order of first place to last place from last session.</p>
+            <p className="name-label">Type in players names in order of first place to last place from the last tournament.</p>
             <p className="name-label">If turn order will be randomized, type player names in any order.</p>
           </div>  
           {error === true &&
-              <p className="error">Players names must be different from each other</p>
+              <p className="error">Players names must be different from each other. </p>
             }
           <div className="players-wrapper">
             {players.map((player, index) => {
@@ -145,18 +146,19 @@ const StartScreen = (props) => {
             })}
           </div>   
           <div className="placement-options">
-            {/* <div className="reverse-placement-button" onClick={() => toggleDisplay()}><p className="draft-text">Change player count</p></div> */}
-            <div className="placement-buttons" onClick={() => checkDupes()}><p className="draft-text">All players are here</p></div> 
+            <div className="placement-buttons" onClick={() => checkDupes()}><p className="draft-text">Select draft option</p></div> 
           </div>
         </div>   
       } 
       {displayThree === true &&
         <div className="placement-options-wrapper">
-          <p className="placement-options-text">All players accounted for! Select one of the draft options below to start the draft.</p>
+          <p className="placement-options-text">All players accounted for!</p>
+          <p className="placement-options-text">Each player will get 60 seconds to select a character, kart, wheels, and glider. If your timer runs out, your pick will be autodrafted.</p>
+          <p className="placement-options-text">Select one of the draft options below to start the draft.</p>
           <div className="placement-options">
-            <div className="placement-buttons" onClick={() => winnersGoFirst()}><p className="draft-text">Previous winners go first</p></div>
-            <div className="placement-buttons" onClick={() => losersGoFirst()}><p className="draft-text">Previous losers go first</p></div>
-            <div className="placement-buttons" onClick={() => randomize(players)}><p className="draft-text">Randomize placement</p></div>
+            <div className="placement-buttons" onClick={() => winnersGoFirst()}><p className="draft-text">Winners go first</p></div>
+            <div className="placement-buttons" onClick={() => losersGoFirst()}><p className="draft-text">Losers go first</p></div>
+            <div className="placement-buttons" onClick={() => randomize(players)}><p className="draft-text">Randomize turn order</p></div>
           </div>
         </div> 
       }

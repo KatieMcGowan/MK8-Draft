@@ -78,7 +78,7 @@ const DraftPlayer = (props) => {
       <div className="player-draft-picks">
         <div className="turn-order-container">
           {!props.player.character
-            ? <p className="turn-order-choices">Character</p>
+            ? <p className="unpicked">?</p>
             : <div>
                 <img src={character} alt="img" height="30" width="30" className="images"/>
                 <p className="turn-order-choices">{props.player.character}</p>
@@ -87,7 +87,7 @@ const DraftPlayer = (props) => {
         </div>  
         <div className="turn-order-container">
           {!props.player.kart
-            ? <p className="turn-order-choices">Kart</p>
+            ? <p className="unpicked">?</p>
             : <div>
                 <img src={kart} alt="img" height="30" width="30" className="images"/>
                 <p className="turn-order-choices">{props.player.kart}</p>
@@ -96,7 +96,7 @@ const DraftPlayer = (props) => {
         </div>    
         <div className="turn-order-container">
           {!props.player.wheel
-            ? <p className="turn-order-choices">Wheels</p>
+            ? <p className="unpicked">?</p>
             : <div>
                 <img src={wheel} alt="img" height="30" width="30" className="images"/>
                 <p className="turn-order-choices">{props.player.wheel}</p>
@@ -105,7 +105,7 @@ const DraftPlayer = (props) => {
         </div>
         <div className="turn-order-container">   
           {!props.player.glider
-            ? <p className="turn-order-choices">Glider</p>
+            ? <p className="unpicked">?</p>
             : <div>
                 <img src={glider} alt="img" height="30" width="30" className="images"/>
                 <p className="turn-order-choices">{props.player.glider}</p>

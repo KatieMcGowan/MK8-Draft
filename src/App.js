@@ -27,8 +27,3 @@ const App = () => {
 }
 
 export default App;
-
-//BIG FIXES
-//Autodraft not at 1 second but 0
-//Autodraft changes css then delays response for populating character info
-//Don't allow users to have same name
