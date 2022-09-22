@@ -13,7 +13,7 @@ const CharacterDisplay = (props) => {
   const handleSelect = () => {
     if (available === true) {
       props.players[props.playerIndex] = {player: props.playerUp.player, character: props.character.name};
-      props.handleUserSelect(props.character);
+      props.handleUserSelect(props.character.name);
       props.setCount(0);
       setAvailable(false);
     } else {

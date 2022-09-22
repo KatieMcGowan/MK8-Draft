@@ -14,7 +14,7 @@ const KartDisplay = (props) => {
   const handleSelect = () => {
     if (available === true) {
       props.players[props.playerIndex] = {player: props.playerUp.player, character: props.playerUp.character, kart: props.kart.name};
-      props.handleUserSelect(props.kart);
+      props.handleUserSelect(props.kart.name);
       props.setCount(0);
       setAvailable(false);
     } else {

@@ -13,7 +13,7 @@ const GliderDisplay = (props) => {
   const handleSelect = () => {
     if (available === true) {
       props.players[props.playerIndex] = {player: props.playerUp.player, character: props.playerUp.character, kart: props.playerUp.kart, wheel: props.playerUp.wheel, glider: props.glider.name};
-      props.handleUserSelect(props.glider);
+      props.handleUserSelect(props.glider.name);
       props.setCount(0)
       setAvailable(false)
     } else {
