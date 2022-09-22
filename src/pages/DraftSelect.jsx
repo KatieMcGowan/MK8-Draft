@@ -87,40 +87,44 @@ const DraftSelect = (props) => {
             <CharacterOptions
               players={players}
               setPlayers={setPlayers}
-              setCount={setCount}
               playerUp={playerUp}
               playerIndex={playerIndex}
               count={count}
+              setCount={setCount}
+              characters={props.data[0]}
             />  
           }
           {currentDraft === "Kart" &&
             <KartOptions
               players={players}
               setPlayers={setPlayers}
-              setCount={setCount}
               playerUp={playerUp}
               playerIndex={playerIndex}
+              setCount={setCount}
               count={count}
+              karts={props.data[1]}
             />
           }
           {currentDraft === "Wheels" &&
             <WheelOptions
               players={players}
               setPlayers={setPlayers}
-              setCount={setCount}
               playerUp={playerUp}
               playerIndex={playerIndex}
+              setCount={setCount}
               count={count}
+              wheels={props.data[2]}
             />
           }
           {currentDraft === "Glider" &&
             <GliderOptions
               players={players}
               setPlayers={setPlayers}
-              setCount={setCount}
               playerUp={playerUp}
               playerIndex={playerIndex}
+              setCount={setCount}
               count={count}
+              gliders={props.data[3]}
             />
           }
         </div>  

@@ -5,7 +5,7 @@ const KartDisplay = (props) => {
 
   //MAKES CHARACTER UNAVAILABLE IF CHARACTER HAS BEEN AUTODRAFTED
   useEffect(() => {
-    if (props.drafted === props.kart) {
+    if (props.drafted === props.kart.name) {
       setAvailable(false)
     };
   }, [props.drafted])
@@ -13,7 +13,7 @@ const KartDisplay = (props) => {
 
   const handleSelect = () => {
     if (available === true) {
-      props.players[props.playerIndex] = {player: props.playerUp.player, character: props.playerUp.character, kart: props.kart};
+      props.players[props.playerIndex] = {player: props.playerUp.player, character: props.playerUp.character, kart: props.kart.name};
       props.handleUserSelect(props.kart);
       props.setCount(0);
       setAvailable(false);
@@ -28,7 +28,8 @@ const KartDisplay = (props) => {
       ? "placeholder-available border-gradient border-gradient-placeholder"
       : "placeholder-unavailable border-gradient"
     } onClick={() => handleSelect()}>
-      <p className="character-name">{props.kart}</p>
+      <img src={props.kart.img} height="50" width="50" alt="img"></img>
+      <p>{props.kart.name}</p>
     </div>
   );
 };

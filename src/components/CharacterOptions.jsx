@@ -3,10 +3,10 @@ import CharacterDisplay from "./CharacterDisplay";
 
 const CharacterOptions = (props) => {
   //ORIGINAL CHARACTER DATA FOR MAPPING ACROSS COMPONENTS
-  const [characters, setCharacters] = useState(["Yoshi", "Shy Guy", "Mario", "Bowser", "Waluigi", "Peach", "Dry Bowser", "Toad", "Luigi", "Wario", "Lakitu", "Morton"])
+  const [characters, setCharacters] = useState(props.characters)
 
   //STATES FOR AUTODRAFT
-  const [ghostCharacters, setGhosts] = useState(characters.slice(0));
+  const [ghostCharacters, setGhosts] = useState([]);
 
   const [drafted, setDrafted] = useState()
 
@@ -29,6 +29,12 @@ const CharacterOptions = (props) => {
       handleAutoSelect();
     };
   }, [props.count])
+
+  useEffect(() => {
+    for (let i = 0; i < characters.length; i++) {
+      ghostCharacters.push(characters[i].name)
+    }
+  }, [])
 
   //USER SELECT FUNCTION
   const handleUserSelect = (name) => {

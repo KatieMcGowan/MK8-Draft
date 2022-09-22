@@ -5,14 +5,14 @@ const CharacterDisplay = (props) => {
 
   //MAKES CHARACTER UNAVAILABLE IF CHARACTER HAS BEEN AUTODRAFTED
   useEffect(() => {
-    if (props.drafted === props.character) {
+    if (props.drafted === props.character.name) {
       setAvailable(false)
     };
   }, [props.drafted])
 
   const handleSelect = () => {
     if (available === true) {
-      props.players[props.playerIndex] = {player: props.playerUp.player, character: props.character};
+      props.players[props.playerIndex] = {player: props.playerUp.player, character: props.character.name};
       props.handleUserSelect(props.character);
       props.setCount(0);
       setAvailable(false);
@@ -27,7 +27,8 @@ const CharacterDisplay = (props) => {
       ? "placeholder-available border-gradient border-gradient-placeholder"
       : "placeholder-unavailable border-gradient"
     } onClick={() => handleSelect()}>
-      <p className="character-name">{props.character}</p>
+      <img src={props.character.img} height="50" width="50" alt="img"></img>
+      <p>{props.character.name}</p>
     </div>
   );
 };

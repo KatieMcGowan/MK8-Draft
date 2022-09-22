@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import WheelDisplay from "./WheelDisplay";
 
 const WheelOptions = (props) => {
-  const [wheels, setWheels] = useState(["Azure Rollers", "Sponge", "Rollers", "Hylian Wheels", "Mercedes Wheels", "Big Orange"])
+  const [wheels, setWheels] = useState(props.wheels)
 
   //STATES FOR AUTODRAFT
-  const [ghostWheels, setGhosts] = useState(wheels.slice(0));
+  const [ghostWheels, setGhosts] = useState([]);
 
   const [drafted, setDrafted] = useState()
 
@@ -28,6 +28,12 @@ const WheelOptions = (props) => {
       handleAutoSelect();
     };
   }, [props.count])
+
+  useEffect(() => {
+    for (let i = 0; i < wheels.length; i++) {
+      ghostWheels.push(wheels[i].name)
+    }
+  }, [])
 
   //USER SELECT FUNCTION
   const handleUserSelect = (name) => {

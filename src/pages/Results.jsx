@@ -10,6 +10,7 @@ const Results = (props) => {
           return <Result
                   key={index}
                   player={player}
+                  data={props.data}
                 />
         })}
       </div>

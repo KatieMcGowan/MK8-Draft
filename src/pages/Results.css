@@ -16,7 +16,6 @@
 }
 
 .player-result {
-  background-color: orange;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,11 +44,6 @@
   padding: 0 10px;
 }
 
-.results-placeholder {
-  background-color: pink;
-  height: 50px;
-  width: 50px;
-  border: solid 4px purple;
-  border-radius: 30px;
+.images {
   margin: 0 0 10px 0;
 }

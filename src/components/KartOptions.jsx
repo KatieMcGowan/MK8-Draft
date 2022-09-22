@@ -3,10 +3,10 @@ import KartDisplay from "./KartDisplay";
 
 const KartOptions = (props) => {
   //ORIGINAL CHARACTER DATA FOR MAPPING ACROSS COMPONENTS
-  const [karts, setKarts] = useState(["Biddybuggy", "Wild Wiggler", "Varmint", "Mercedes GLA", "Prancer", "Pipe Frame"])
+  const [karts, setKarts] = useState(props.karts)
 
   //STATES FOR AUTODRAFT
-  const [ghostKarts, setGhosts] = useState(karts.slice(0));
+  const [ghostKarts, setGhosts] = useState([])
 
   const [drafted, setDrafted] = useState()
 
@@ -29,6 +29,12 @@ const KartOptions = (props) => {
       handleAutoSelect();
     };
   }, [props.count])
+
+  useEffect(() => {
+    for (let i = 0; i < karts.length; i++) {
+      ghostKarts.push(karts[i].name)
+    }
+  }, [])
 
   //USER SELECT FUNCTION
   const handleUserSelect = (name) => {

@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import GliderDisplay from "./GliderDisplay";
 
 const GliderOptions = (props) => {
-  const [gliders, setGliders] = useState(["Plane Glider", "Bowser Glider", "Flower Glider", "Gold Kite", "Clouds", "Squirrel"])
+  const [gliders, setGliders] = useState(props.gliders)
 
   //STATES FOR AUTODRAFT
-  const [ghostGliders, setGhosts] = useState(gliders.slice(0));
+  const [ghostGliders, setGhosts] = useState([]);
 
   const [drafted, setDrafted] = useState()
 
@@ -22,12 +22,18 @@ const GliderOptions = (props) => {
     ghostGliders.splice(random, 1)
   };
 
-  //INITIALIZES AUTODRAFT WHEN COUNT HITS 0
+  //INITIALIZES AUTODRAFT WHEN COUNT HITS 1
   useEffect(() => {
     if (props.count === 1 && !props.playerUp.glider) {
       handleAutoSelect();
     };
   }, [props.count])
+
+  useEffect(() => {
+    for (let i = 0; i < gliders.length; i++) {
+      ghostGliders.push(gliders[i].name)
+    }
+  }, [])
 
   //USER SELECT FUNCTION
   const handleUserSelect = (name) => {

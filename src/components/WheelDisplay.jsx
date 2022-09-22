@@ -5,14 +5,14 @@ const WheelDisplay = (props) => {
 
   //MAKES CHARACTER UNAVAILABLE IF CHARACTER HAS BEEN AUTODRAFTED
   useEffect(() => {
-    if (props.drafted === props.wheel) {
+    if (props.drafted === props.wheel.name) {
       setAvailable(false)
     };
   }, [props.drafted])
 
   const handleSelect = () => {
     if (available === true) {
-      props.players[props.playerIndex] = {player: props.playerUp.player, character: props.playerUp.player, kart: props.playerUp.kart, wheel: props.wheel};
+      props.players[props.playerIndex] = {player: props.playerUp.player, character: props.playerUp.player, kart: props.playerUp.kart, wheel: props.wheel.name};
       props.handleUserSelect(props.wheel);
       props.setCount(0)
       setAvailable(false)
@@ -27,7 +27,8 @@ const WheelDisplay = (props) => {
       ? "placeholder-available border-gradient border-gradient-placeholder"
       : "placeholder-unavailable border-gradient"
     } onClick={() => handleSelect()}>
-      <p className="character-name">{props.wheel}</p>
+      <img src={props.wheel.img} height="50" width="50" alt="img"></img>
+      <p>{props.wheel.name}</p>
     </div>
   );
 };
