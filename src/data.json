@@ -3,24 +3,88 @@
       {
         "name": "Mario",
         "img": "images/characters/mario.png"
+      },
+      {
+        "name": "Luigi",
+        "img": "images/characters/luigi.png"
+      },
+      {
+        "name": "Peach",
+        "img": "images/characters/peach.png"
+      },
+      {
+        "name": "Daisy",
+        "img": "images/characters/daisy.png"
+      },
+      {
+        "name": "Rosalina",
+        "img": "images/characters/rosalina.png"
       }
     ],
   [
       {
         "name": "Standard Kart",
         "img": "images/vehicles/standardkart.png"
+      },
+      {
+        "name": "Pipe Frame",
+        "img": "images/vehicles/pipeframe.png"
+      },
+      {
+        "name": "Mach 8",
+        "img": "images/vehicles/mach8.png"
+      },
+      {
+        "name": "Steel Driver",
+        "img": "images/vehicles/steeldriver.png"
+      },
+      {
+        "name": "Cat Cruiser",
+        "img": "images/vehicles/catcruiser.png"
       }
     ],
   [
       {
         "name": "Standard",
         "img": "images/wheels/standard.png"
+      },
+      {
+        "name": "Monster",
+        "img": "images/wheels/monster.png"
+      },
+      {
+        "name": "Roller",
+        "img": "images/wheels/roller.png"
+      },
+      {
+        "name": "Slim",
+        "img": "images/wheels/slim.png"
+      },
+      {
+        "name": "Slick",
+        "img": "images/wheels/slick.png"
       }
     ],
   [
       {
         "name": "Super Glider",
         "img": "images/gliders/superglider.png"
+      },
+      {
+        "name": "Cloud Glider",
+        "img": "images/gliders/cloudglider.png"
+      },
+      {
+        "name": "Wario Wing",
+        "img": "images/gliders/wariowing.png"
+      },
+      {
+        "name": "Waddle Wing",
+        "img": "images/gliders/waddlewing.png"
+      },
+      {
+        "name": "Peach Parasol",
+        "img": "images/gliders/peachparasol.png"
       }
   ]
 ]
