@@ -13,13 +13,12 @@
 
 .how-many-players-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
 label {
-  margin: 0 5px 0 0;
   font-size: 12px;
 }
 
@@ -70,6 +69,19 @@ input {
 .players-input {
   width: 30px;
   font-size: 12px;
+  margin-top: 20px;
+}
+
+.conditional-wrapper {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.players-wrapper-headers {
+  display: flex;
+  flex-direction: column;
 }
 
 .placement-options-wrapper {
@@ -96,11 +108,10 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .placement-options-text {
-  margin: 10px 0 20px 0;
+  margin-bottom: 20px;
   font-size: 12px;
   max-width: 200px;
   text-align: center;
@@ -183,7 +194,7 @@ input {
 
 .draft-text {
   padding: 10px 0  10px 20px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 
@@ -192,17 +203,11 @@ input {
   padding: 10px 0 30px 20px;
   font-size: 14px;
 }
-.players-wrapper-headers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 
 .players-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 10px 0;
 }
 
 .players-name-placement {
@@ -245,5 +250,9 @@ input {
   .more-players {
     font-size: 14px;
     width: 225px;
+  }
+
+  .draft-text {
+    font-size: 14px;
   }
 }

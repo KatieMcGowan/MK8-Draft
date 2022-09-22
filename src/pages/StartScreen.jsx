@@ -126,6 +126,7 @@ const StartScreen = (props) => {
         <div className="conditional-wrapper">
           <div className="players-wrapper-headers">
             <p className="name-label">Type in players names in order of first place to last place from last session.</p>
+            <p className="name-label">If turn order will be randomized, type player names in any order.</p>
           </div>  
           {error === true &&
               <p className="error">Players names must be different from each other</p>
@@ -144,8 +145,8 @@ const StartScreen = (props) => {
             })}
           </div>   
           <div className="placement-options">
-            <div className="reverse-placement-button" onClick={() => toggleDisplay()}><p className="draft-text">Change player count</p></div>
-            <div className="placement-buttons" onClick={() => checkDupes()}><p className="draft-text-here">All players are here</p></div> 
+            {/* <div className="reverse-placement-button" onClick={() => toggleDisplay()}><p className="draft-text">Change player count</p></div> */}
+            <div className="placement-buttons" onClick={() => checkDupes()}><p className="draft-text">All players are here</p></div> 
           </div>
         </div>   
       } 

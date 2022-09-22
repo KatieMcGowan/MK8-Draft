@@ -28,7 +28,7 @@ const GliderDisplay = (props) => {
       : "placeholder-unavailable border-gradient"
     } onClick={() => handleSelect()}>
       <img src={props.glider.img} height="50" width="50" alt="img"></img>
-      <p>{props.glider.name}</p>
+      <p className="draft-name">{props.glider.name}</p>
     </div>
   );
 };

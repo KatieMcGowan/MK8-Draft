@@ -27,13 +27,13 @@ const DraftSelect = (props) => {
   const [categoryIndex, setCategoryIndex] = useState(0)
 
   // USEEFFECT HOOKS TO ITERATE OVER PLAYER AND CATEGORY STATES AS TIMER PROGRESSES
-  // useEffect(() => {
-  //   if (count <= 0) return;
-  //   const countdown = setInterval(() => {
-  //     setCount(count - 1)
-  //   }, 1000);
-  //   return () => clearInterval(countdown)
-  // }, [count])
+  useEffect(() => {
+    if (count <= 0) return;
+    const countdown = setInterval(() => {
+      setCount(count - 1)
+    }, 1000);
+    return () => clearInterval(countdown)
+  }, [count])
 
   useEffect(() => {
     if (count === 0 && playerIndex < players.length - 1) {
@@ -78,6 +78,7 @@ const DraftSelect = (props) => {
                       key={index}
                       player={player}
                       playerUp={playerUp}
+                      data={props.data}
                     />
             })}
         </div>

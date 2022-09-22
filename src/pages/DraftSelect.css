@@ -12,6 +12,7 @@
 
 .turn-order-header{
   margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .draft-body {
@@ -56,7 +57,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 10px;
+  align-items: center;
 }
 
 .name-and-placement {
@@ -65,7 +66,23 @@
 }
 
 .player-draft-picks {
-  margin: 0 0 0 25px;
+  /* margin: 0 0 0 25px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.turn-order-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.turn-order-choices {
+  font-size: 13px;
+  /* max-width: 70px; */
 }
 
 .show-stats {
@@ -152,5 +169,15 @@
 }
 
 img {
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
+}
+
+.draft-name {
+  font-size: 12px;
+}
+
+@media (min-width: 600px){
+  .draft-name {
+    font-size: 16px;
+  }
 }

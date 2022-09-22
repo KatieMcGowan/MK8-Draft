@@ -29,7 +29,7 @@ const KartDisplay = (props) => {
       : "placeholder-unavailable border-gradient"
     } onClick={() => handleSelect()}>
       <img src={props.kart.img} height="50" width="50" alt="img"></img>
-      <p>{props.kart.name}</p>
+      <p className="draft-name">{props.kart.name}</p>
     </div>
   );
 };
