@@ -19,6 +19,130 @@
       {
         "name": "Rosalina",
         "img": "images/characters/rosalina.png"
+      },
+      {
+        "name": "Metal Mario",
+        "img": "images/characters/metalmario.png"
+      },
+      {
+        "name": "Yoshi",
+        "img": "images/characters/yoshi.png"
+      },
+      {
+        "name": "Toad",
+        "img": "images/characters/toad.png"
+      },
+      {
+        "name": "Koopa Troopa",
+        "img": "images/characters/koopatroopa.png"
+      },
+      {
+        "name": "Shy Guy",
+        "img": "images/characters/shyguy.png"
+      },
+      {
+        "name": "Lakitu",
+        "img": "images/characters/lakitu.png"
+      },
+      {
+        "name": "Toadette",
+        "img": "images/characters/toadette.png"
+      },
+      {
+        "name": "Baby Mario",
+        "img": "images/characters/babymario.png"
+      },
+      {
+        "name": "Baby Luigi",
+        "img": "images/characters/babyluigi.png"
+      },
+      {
+        "name": "Baby Peach",
+        "img": "images/characters/babypeach.png"
+      },
+      {
+        "name": "Baby Daisy",
+        "img": "images/characters/babydaisy.png"
+      },
+      {
+        "name": "Baby Rosalina",
+        "img": "images/characters/babyrosalina.png"
+      },
+      {
+        "name": "Pink Gold Peach",
+        "img": "images/characters/pinkgoldpeach.png"
+      },
+      {
+        "name": "Bowser",
+        "img": "images/characters/bowser.png"
+      },
+      {
+        "name": "Donkey Kong",
+        "img": "images/characters/donkeykong.png"
+      },
+      {
+        "name": "Wario",
+        "img": "images/characters/wario.png"
+      },
+      {
+        "name": "Waluigi",
+        "img": "images/characters/waluigi.png"
+      },
+      {
+        "name": "Iggy",
+        "img": "images/characters/iggy.png"
+      },
+      {
+        "name": "Roy",
+        "img": "images/characters/roy.png"
+      },
+      {
+        "name": "Lemmy",
+        "img": "images/characters/lemmy.png"
+      },
+      {
+        "name": "Larry",
+        "img": "images/characters/larry.png"
+      },
+      {
+        "name": "Wendy",
+        "img": "images/characters/wendy.png"
+      },
+      {
+        "name": "Ludwig",
+        "img": "images/characters/ludwig.png"
+      },
+      {
+        "name": "Morton",
+        "img": "images/characters/morton.png"
+      },
+      {
+        "name": "Mii",
+        "img": "images/characters/mii.png"
+      },
+      {
+        "name": "Tanooki Mario",
+        "img": "images/characters/tanookimario.png"
+      },
+      {
+        "name": "Cat Peach",
+        "img": "images/characters/catpeach.png"
+      },
+      {
+        "name": "Link",
+        "img": "images/characters/link.png"
+      },
+      {
+        "name": "Villager",
+        "img": "images/characters/villager.png"
+      },
+      {
+        "name": "Isabelle",
+        "img": "images/characters/isabelle.png"
+      },
+      {
+        "name": "Dry Bowser",
+        "img": "images/characters/drybowser.png"
       }
     ],
   [

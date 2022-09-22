@@ -1,10 +1,12 @@
 .wrapper {
   background-color: orange;
+  width: 100vw;
   margin-top: -50px;
 }
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   margin: 50px 0;
   border-top: 5px solid black;
 }
@@ -13,8 +15,8 @@
   background-color: lightblue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  flex: 1 0 cacl(20% - 14px);
   border: 2px double blue;
   padding: 5px;
   margin: 0 5px;
