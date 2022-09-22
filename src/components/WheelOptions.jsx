@@ -31,7 +31,6 @@ const WheelOptions = (props) => {
 
   //USER SELECT FUNCTION
   const handleUserSelect = (name) => {
-    console.log(name);
     for (let i = 0; i < ghostWheels.length; i++) {
       if (name === ghostWheels[i]) {
         ghostWheels.splice(i, 1)

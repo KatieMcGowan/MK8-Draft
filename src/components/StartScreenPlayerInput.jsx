@@ -1,7 +1,6 @@
 import React, {useState} from "react"
 
 const StartScreenPlayerInput = (props) => {
-
   return(
     <div className="players-name-placement">
       <input className="player-name"

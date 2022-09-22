@@ -32,7 +32,6 @@ const CharacterOptions = (props) => {
 
   //USER SELECT FUNCTION
   const handleUserSelect = (name) => {
-    console.log(name);
     for (let i = 0; i < ghostCharacters.length; i++) {
       if (name === ghostCharacters[i]) {
         ghostCharacters.splice(i, 1)

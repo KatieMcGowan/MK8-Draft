@@ -31,7 +31,6 @@ const GliderOptions = (props) => {
 
   //USER SELECT FUNCTION
   const handleUserSelect = (name) => {
-    console.log(name);
     for (let i = 0; i < ghostGliders.length; i++) {
       if (name === ghostGliders[i]) {
         ghostGliders.splice(i, 1)
