@@ -10,6 +10,7 @@ const Result = (props) => {
 
   const [glider, setGlider] = useState()
 
+
   useEffect(() => {
     for (let i = 0; i < props.data[0].length; i++) {
       if (props.data[0][i].name === props.player.character) {

@@ -13,6 +13,7 @@ import data from './data.json';
 const App = () => {
   const [players, setPlayers] = useState([])
 
+  console.log(players);
   return (
     <div className="App">
       <Header />

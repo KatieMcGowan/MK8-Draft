@@ -2,6 +2,7 @@ import Result from "../components/Result"
 import "./Results.css"
 
 const Results = (props) => {
+  console.log(props.players)
   return(
     <div className="results-wrapper">
       <p className="results-header">Results</p>
