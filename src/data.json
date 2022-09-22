@@ -401,6 +401,42 @@
       {
         "name": "Peach Parasol",
         "img": "images/gliders/peachparasol.png"
+      },
+      {
+        "name": "Parachute",
+        "img": "images/gliders/parachute.png"
+      },
+      {
+        "name": "Parafoil",
+        "img": "images/gliders/parafoil.png"
+      },
+      {
+        "name": "Flower Glider",
+        "img": "images/gliders/flowerglider.png"
+      },
+      {
+        "name": "Bowser Kite",
+        "img": "images/gliders/bowserkite.png"
+      },
+      {
+        "name": "Plane Glider",
+        "img": "images/gliders/planeglider.png"
+      },
+      {
+        "name": "MKTV Parafoil",
+        "img": "images/gliders/mktvparafoil.png"
+      },
+      {
+        "name": "Gold Glider",
+        "img": "images/gliders/goldglider.png"
+      },
+      {
+        "name": "Hylian Kite",
+        "img": "images/gliders/hyliankite.png"
+      },
+      {
+        "name": "Paper Glider",
+        "img": "images/gliders/paperglider.png"
       }
   ]
 ]
