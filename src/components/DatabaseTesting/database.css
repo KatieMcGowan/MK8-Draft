@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: orange;
+  margin-top: -50px;
+}
+
+.container {
+  display: flex;
+  margin: 50px 0;
+  border-top: 5px solid black;
+}
+
+.item {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px double blue;
+  padding: 5px;
+  margin: 0 5px;
+
+}

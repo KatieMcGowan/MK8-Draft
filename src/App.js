@@ -5,7 +5,7 @@ import Header from './components/Header';
 import StartScreen from './pages/StartScreen';
 import DraftSelect from './pages/DraftSelect';
 import Results from './pages/Results';
-import DatabaseTesting from './components/DatabaseTesting';
+import DatabaseTesting from './components/DatabaseTesting/DatabaseTesting';
 
 // Database
 import data from './data.json';
