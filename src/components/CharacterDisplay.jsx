@@ -11,7 +11,6 @@ const CharacterDisplay = (props) => {
   }, [props.drafted])
 
   const handleSelect = () => {
-    console.log(props.character)
     if (available === true) {
       props.players[props.playerIndex] = {player: props.playerUp.player, character: props.character};
       props.handleUserSelect(props.character);

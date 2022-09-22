@@ -80,10 +80,23 @@ input {
   flex-direction: column;
 }
 
+.input-player-names-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  margin-bottom: 20px;
+  color: rgb(244, 85, 85)
+}
+
 .placement-options {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .placement-options-text {
@@ -173,6 +186,12 @@ input {
   font-size: 14px;
 }
 
+
+.draft-text-here {
+  margin-left: 15px;
+  padding: 10px 0 30px 20px;
+  font-size: 14px;
+}
 .players-wrapper-headers {
   display: flex;
   flex-direction: row;
