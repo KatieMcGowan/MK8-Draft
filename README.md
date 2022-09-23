@@ -7,6 +7,18 @@ A draft application that allows MK8 Deluxe players to draft characters, karts, w
 - React
 - React-router-dom
 
+## Object Model & Wireframes
+
+### Object Model
+
+![ObjectModel](./public/assets/Mario%20Kart%20Draft-Object%20Model.jpg)
+
+![SetUp](./public/assets/Mario%20Kart%20Draft-Draft%20Start%20Screen.jpg)
+
+![Draft](./public/assets/Mario%20Kart%20Draft-Draft%20Timer%202.jpg)
+
+![Results](./public/assets/Mario%20Kart%20Draft-Results%20Screen.jpg)
+
 ## Future Features
 
 - [ ] Create a snake draft option
