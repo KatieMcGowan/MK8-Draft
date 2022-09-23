@@ -83,7 +83,7 @@ const DraftSelect = (props) => {
             })}
         </div>
       </div>  
-        <div className="draft-right border-gradient border-gradient-reverse-rainbow">
+        <div className="draft-right">
           {currentDraft === "Character" &&
             <CharacterOptions
               players={players}

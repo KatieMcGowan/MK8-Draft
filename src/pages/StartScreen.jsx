@@ -153,7 +153,7 @@ const StartScreen = (props) => {
       {displayThree === true &&
         <div className="placement-options-wrapper">
           <p className="placement-options-text">All players accounted for!</p>
-          <p className="placement-options-text">Each player will get 60 seconds to select a character, kart, wheels, and glider. If your timer runs out, your pick will be autodrafted.</p>
+          <p className="placement-options-text">Players will get 60 seconds to select from each of the following categories: character, kart, wheels, and glider. If your timer runs out, your category pick will be autodrafted.</p>
           <p className="placement-options-text">Select one of the draft options below to start the draft.</p>
           <div className="placement-options">
             <div className="placement-buttons" onClick={() => winnersGoFirst()}><p className="draft-text">Winners go first</p></div>

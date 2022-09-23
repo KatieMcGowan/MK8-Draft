@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react"
 const DraftPlayer = (props) => {
   const [display, setDisplay] = useState(false);
 
-  const toggleDisplay = () => {
-    if (display === false) {
-      setDisplay(true)
-    } else {
-      setDisplay(false)
-    }
-  }
+  // const toggleDisplay = () => {
+  //   if (display === false) {
+  //     setDisplay(true)
+  //   } else {
+  //     setDisplay(false)
+  //   }
+  // }
 
   //STATE AND USEEFFECT HOOKS TO POPULATE IMAGES
   const [character, setCharacter] = useState()
@@ -54,6 +54,16 @@ const DraftPlayer = (props) => {
   }, [props.player.glider])
 
 
+  useEffect(() => {
+    if (props.player === props.playerUp) {
+      setDisplay(true)
+    } else if (props.player !== props.playerUp) {
+      setTimeout(() => {
+        setDisplay(false)
+      }, 1000)
+    }
+  }, [props.playerUp])
+
   return(
     <div className=
     {props.playerUp.player === props.player.player
@@ -65,14 +75,6 @@ const DraftPlayer = (props) => {
           <p>{props.index + 1}. </p>
           <p>{props.player.player}</p>
         </div>
-        <div className="toggle-stats">
-          <div className=
-            {display === false
-            ? "show-stats" 
-            : "hide-stats"
-            }
-          onClick={(() => toggleDisplay())}></div>
-        </div>
       </div>  
       {display === true &&
       <div className="player-draft-picks">
@@ -80,7 +82,7 @@ const DraftPlayer = (props) => {
           {!props.player.character
             ? <p className="unpicked">?</p>
             : <div>
-                <img src={character} alt="img" height="30" width="30" className="images"/>
+                <img src={character} alt="img" height="30" width="30" className="turnorder-images"/>
                 <p className="turn-order-choices">{props.player.character}</p>
               </div>  
           }
@@ -89,7 +91,7 @@ const DraftPlayer = (props) => {
           {!props.player.kart
             ? <p className="unpicked">?</p>
             : <div>
-                <img src={kart} alt="img" height="30" width="30" className="images"/>
+                <img src={kart} alt="img" height="30" width="30" className="turnorder-images"/>
                 <p className="turn-order-choices">{props.player.kart}</p>
               </div>
           }
@@ -98,7 +100,7 @@ const DraftPlayer = (props) => {
           {!props.player.wheel
             ? <p className="unpicked">?</p>
             : <div>
-                <img src={wheel} alt="img" height="30" width="30" className="images"/>
+                <img src={wheel} alt="img" height="30" width="30" className="turnorder-images"/>
                 <p className="turn-order-choices">{props.player.wheel}</p>
               </div>
           }  
@@ -107,7 +109,7 @@ const DraftPlayer = (props) => {
           {!props.player.glider
             ? <p className="unpicked">?</p>
             : <div>
-                <img src={glider} alt="img" height="30" width="30" className="images"/>
+                <img src={glider} alt="img" height="30" width="30" className="turnorder-images"/>
                 <p className="turn-order-choices">{props.player.glider}</p>
               </div>
           }
