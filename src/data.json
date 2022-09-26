@@ -21,8 +21,12 @@
         "img": "images/characters/rosalina.png"
       },
       {
-        "name": "Metal Mario",
-        "img": "images/characters/metalmario.png"
+        "name": "Tanooki Mario",
+        "img": "images/characters/tanookimario.png"
+      },
+      {
+        "name": "Cat Peach",
+        "img": "images/characters/catpeach.png"
       },
       {
         "name": "Yoshi",
@@ -49,6 +53,10 @@
         "img": "images/characters/toadette.png"
       },
       {
+        "name": "King Boo",
+        "img": "images/characters/kingboo.png"
+      },
+      {
         "name": "Baby Mario",
         "img": "images/characters/babymario.png"
       },
@@ -69,16 +77,12 @@
         "img": "images/characters/babyrosalina.png"
       },
       {
+        "name": "Metal/Gold Mario",
+        "img": "images/characters/metalmario.png"
+      },
+      {
         "name": "Pink Gold Peach",
         "img": "images/characters/pinkgoldpeach.png"
-      },
-      {
-        "name": "Bowser",
-        "img": "images/characters/bowser.png"
-      },
-      {
-        "name": "Donkey Kong",
-        "img": "images/characters/donkeykong.png"
       },
       {
         "name": "Wario",
@@ -89,12 +93,24 @@
         "img": "images/characters/waluigi.png"
       },
       {
-        "name": "Iggy",
-        "img": "images/characters/iggy.png"
+        "name": "Donkey Kong",
+        "img": "images/characters/donkeykong.png"
       },
       {
-        "name": "Roy",
-        "img": "images/characters/roy.png"
+        "name": "Bowser",
+        "img": "images/characters/bowser.png"
+      },
+      {
+        "name": "Dry Bones",
+        "img": "images/characters/drybones.png"
+      },
+      {
+        "name": "Bowser Jr.",
+        "img": "images/characters/bowserjr.png"
+      },
+      {
+        "name": "Dry Bowser",
+        "img": "images/characters/drybowser.png"
       },
       {
         "name": "Lemmy",
@@ -113,36 +129,44 @@
         "img": "images/characters/ludwig.png"
       },
       {
+        "name": "Iggy",
+        "img": "images/characters/iggy.png"
+      },
+      {
+        "name": "Roy",
+        "img": "images/characters/roy.png"
+      },
+      {
         "name": "Morton",
         "img": "images/characters/morton.png"
       },
       {
-        "name": "Mii",
-        "img": "images/characters/mii.png"
+        "name": "Inkling Girl",
+        "img": "images/characters/inklinggirl.png"
       },
       {
-        "name": "Tanooki Mario",
-        "img": "images/characters/tanookimario.png"
-      },
-      {
-        "name": "Cat Peach",
-        "img": "images/characters/catpeach.png"
+        "name": "Inkling Boy",
+        "img": "images/characters/inklingboy.png"
       },
       {
         "name": "Link",
         "img": "images/characters/link.png"
       },
       {
-        "name": "Villager",
-        "img": "images/characters/villager.png"
+        "name": "Male Villager",
+        "img": "images/characters/malevillager.png"
+      },
+      {
+        "name": "Female Villager",
+        "img": "images/characters/femalevillager.png"
       },
       {
         "name": "Isabelle",
         "img": "images/characters/isabelle.png"
       },
       {
-        "name": "Dry Bowser",
-        "img": "images/characters/drybowser.png"
+        "name": "Mii",
+        "img": "images/characters/mii.png"
       }
     ],
   [
@@ -219,12 +243,12 @@
         "img": "images/vehicles/bluefalcon.png"
       },
       {
-        "name": "B Dasher",
-        "img": "images/vehicles/bdasher.png"
-      },
-      {
         "name": "Tanooki Kart",
         "img": "images/vehicles/tanookikart.png"
+      },
+      {
+        "name": "B Dasher",
+        "img": "images/vehicles/bdasher.png"
       },
       {
         "name": "Streetle",
@@ -233,6 +257,10 @@
       {
         "name": "P-Wing",
         "img": "images/vehicles/pwing.png"
+      },
+      {
+        "name": "Koopa Clown",
+        "img": "images/vehicles/koopaclown.png"
       },
       {
         "name": "Standard Bike",
@@ -275,6 +303,10 @@
         "img": "images/vehicles/mastercycle.png"
       },
       {
+        "name": "Master Cycle Zero",
+        "img": "images/vehicles/mastercyclezero.png"
+      },
+      {
         "name": "City Tripper",
         "img": "images/vehicles/citytripper.png"
       },
@@ -293,6 +325,14 @@
       {
         "name": "Bone Rattler",
         "img": "images/vehicles/bonerattler.png"
+      },
+      {
+        "name": "Splat Buggy",
+        "img": "images/vehicles/splatbuggy.png"
+      },
+      {
+        "name": "Inkstriker",
+        "img": "images/vehicles/inkstriker.png"
       }
     ],
   [
@@ -377,6 +417,10 @@
         "img": "images/wheels/triforcetires.png"
       },
       {
+        "name": "Ancient Tires",
+        "img": "images/wheels/ancienttires.png"
+      },
+      {
         "name": "Leaf Tires",
         "img": "images/wheels/leaftires.png"
       }
@@ -433,6 +477,10 @@
       {
         "name": "Hylian Kite",
         "img": "images/gliders/hyliankite.png"
+      },
+      {
+        "name": "Paraglider",
+        "img": "images/gliders/paraglider.png"
       },
       {
         "name": "Paper Glider",
