@@ -27,8 +27,10 @@ const CharacterDisplay = (props) => {
       ? "placeholder-available border-gradient border-gradient-placeholder"
       : "placeholder-unavailable border-gradient"
     } onClick={() => handleSelect()}>
-      <img src={props.character.img} height="100" width="100" alt="img"></img>
-      <p className="draft-name">{props.character.name}</p>
+      <div className="individual-draft-option">
+        <img src={props.character.img} height="100" width="100" alt="img"></img>
+        <p className="draft-name">{props.character.name}</p>
+      </div>  
     </div>
   );
 };

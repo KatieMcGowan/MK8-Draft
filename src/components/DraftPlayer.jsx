@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 const DraftPlayer = (props) => {
-  const [display, setDisplay] = useState(false);
+  const [display, setDisplay] = useState(true);
 
   // const toggleDisplay = () => {
   //   if (display === false) {
@@ -53,7 +53,6 @@ const DraftPlayer = (props) => {
     };
   }, [props.player.glider])
 
-
   useEffect(() => {
     if (props.player === props.playerUp) {
       setDisplay(true)
@@ -65,8 +64,7 @@ const DraftPlayer = (props) => {
   }, [props.playerUp])
 
   return(
-    <div className=
-    {props.playerUp.player === props.player.player
+    <div className={props.playerUp.player === props.player.player
       ? "playerup-wrapper"
       : "player-wrapper"
     }>

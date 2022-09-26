@@ -27,8 +27,10 @@ const WheelDisplay = (props) => {
       ? "placeholder-available border-gradient border-gradient-placeholder"
       : "placeholder-unavailable border-gradient"
     } onClick={() => handleSelect()}>
-      <img src={props.wheel.img} height="64" width="100" alt="img" className="kart-images"></img>
-      <p className="draft-name">{props.wheel.name}</p>
+      <div className="image-and-name">
+        <img src={props.wheel.img} height="64" width="100" alt="img"></img>
+        <p className="draft-name">{props.wheel.name}</p>
+      </div>
     </div>
   );
 };

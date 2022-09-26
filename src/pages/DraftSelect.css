@@ -45,6 +45,7 @@
 .draft-left {
   width: 25%;
   padding: 10px;
+  margin-top: 5px
 }
 
 .player-list {
@@ -86,18 +87,15 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  width: 25%;
 }
 
 .turn-order-choices {
-  font-size: 13px;
+  font-size: 10px;
 }
 
 .unpicked {
   font-size: 38px;
-}
-
-.kart-images {
-  margin-top: 20px;
 }
 
 .show-stats {
@@ -172,6 +170,8 @@
 .character-name {
   padding: 26px 0;
 }
+
+
 .placeholder-available:hover {
   cursor: pointer;
   transform: scale(.9)
@@ -185,6 +185,14 @@
   text-align: center;
   background-color: gray; 
   opacity: 0.33;
+}
+
+.image-and-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .draft-name {
