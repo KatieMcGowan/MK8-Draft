@@ -106,7 +106,7 @@ const StartScreen = (props) => {
         <form onSubmit={handlePlayers}>
           <div className="draft-setup-questions">
             <div className="how-many-players-wrapper">
-              <p className="name-label">Welcome to the MK8 Deluxe Draft! Please respond to the following prompts for draft set-up. At that point, the draft will begin.</p>
+              <p className="name-label">Welcome to the MK8 Deluxe Draft! Please respond to the following prompts for draft set-up.</p>
               <label htmlFor="players">How many players are in your lobby?</label>
               <input
                 className="players-input"
@@ -126,8 +126,8 @@ const StartScreen = (props) => {
       {displayTwo === true && 
         <div className="conditional-wrapper">
           <div className="players-wrapper-headers">
-            <p className="name-label">Type in players names in order of first place to last place from the last tournament.</p>
-            <p className="name-label">If turn order will be randomized, type player names in any order.</p>
+            <p className="name-label">Type in the player's names in order of first place to last place from the last tournament.</p>
+            <p className="name-label">If the draft order will be randomized, type the player's name in any order.</p>
           </div>  
           {error === true &&
               <p className="error">Players names must be different from each other. </p>
@@ -158,7 +158,7 @@ const StartScreen = (props) => {
           <div className="placement-options">
             <div className="placement-buttons" onClick={() => winnersGoFirst()}><p className="draft-text">Winners go first</p></div>
             <div className="placement-buttons" onClick={() => losersGoFirst()}><p className="draft-text">Losers go first</p></div>
-            <div className="placement-buttons" onClick={() => randomize(players)}><p className="draft-text">Randomize turn order</p></div>
+            <div className="placement-buttons" onClick={() => randomize(players)}><p className="draft-text">Randomize draft order</p></div>
           </div>
         </div> 
       }

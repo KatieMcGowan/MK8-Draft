@@ -45,7 +45,7 @@ const Result = (props) => {
 
   return(
 
-    <div className="player-result border-gradient border-gradient-rainbow">
+    <div className="player-result">
       <p className="result-player-name">{props.player.player}</p>
         <div className="player-build">
           <div className="selected">
@@ -53,15 +53,15 @@ const Result = (props) => {
             <p className="character">{props.player.character}</p>
           </div>
           <div className="selected">
-            <img src={kart} alt="img" height="50" width="50" className="images"/>
+            <img src={kart} alt="img" height="50" width="78" className="images"/>
             <p className="kart">{props.player.kart}</p>
           </div>
           <div className="selected">
-            <img src={wheel} alt="img" height="50" width="50" className="images"/>
+            <img src={wheel} alt="img" height="50" width="78" className="images"/>
             <p className="wheels">{props.player.wheel}</p>
           </div>
           <div className="selected">
-            <img src={glider} alt="img" height="50" width="50" className="images"/>
+            <img src={glider} alt="img" height="50" width="78" className="images"/>
             <p className="glider">{props.player.glider}</p>
           </div>
         </div>

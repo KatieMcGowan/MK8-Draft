@@ -25,7 +25,6 @@
   margin: 10px;
   border-radius: 30px;
   border: solid 4px orangered;
-  min-width: 350px;
 }
 
 .result-player-name {
@@ -45,7 +44,7 @@
   text-align: center;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 10px;
+  padding: 0 5px;
   width: 25%;
 }
 
@@ -67,4 +66,18 @@
 
 .images {
   margin: 0 0 10px 0;
+}
+
+@media (min-width: 600px) {
+  .player-result {
+    justify-content: center;
+    width: 350px;
+    height: 160px;
+    padding: 20px;
+    border-radius: 50px;
+  }
+
+  .selected {
+    padding: 0 10px;
+  }
 }

@@ -9,6 +9,7 @@ const StartScreenPlayerInput = (props) => {
         minLength="1"
         maxLength="10"
         required={true}
+        placeholder={props.index + 1}
         value={props.player.player}
         onChange={event => props.handleNameInput(props.index, event)}
       />  

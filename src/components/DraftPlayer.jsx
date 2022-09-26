@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react"
 
 const DraftPlayer = (props) => {
-  const [display, setDisplay] = useState(true);
+  const [display, setDisplay] = useState(false);
 
-  // const toggleDisplay = () => {
-  //   if (display === false) {
-  //     setDisplay(true)
-  //   } else {
-  //     setDisplay(false)
-  //   }
-  // }
+  const toggleDisplay = () => {
+    if (display === false) {
+      setDisplay(true)
+    } else {
+      setDisplay(false)
+    }
+  }
 
   //STATE AND USEEFFECT HOOKS TO POPULATE IMAGES
   const [character, setCharacter] = useState()
@@ -59,7 +59,7 @@ const DraftPlayer = (props) => {
     } else if (props.player !== props.playerUp) {
       setTimeout(() => {
         setDisplay(false)
-      }, 1000)
+      }, 500)
     }
   }, [props.playerUp])
 

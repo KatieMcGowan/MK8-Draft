@@ -87,6 +87,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  justify-content: center;
   width: 25%;
 }
 
@@ -96,6 +97,7 @@
 
 .unpicked {
   font-size: 38px;
+  align-self: center;
 }
 
 .show-stats {
