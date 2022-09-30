@@ -2,6 +2,8 @@
 
 A draft application that allows MK8 Deluxe players to draft characters, karts, wheels, and gliders for their next tournament. Users answer prompts on the start screen for draft set-up. The draft is then initiated. If a user does not select from a category within the alotted time, a pick is autodrafted for them. Results are displayed at the end of the draft. 
 
+The deployed application can be found [here](https://deluxedraft.herokuapp.com).
+
 ## Technologies Used
 
 - React
