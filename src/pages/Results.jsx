@@ -17,7 +17,9 @@ const Results = (props) => {
                 />
         })}
       </div>
-      <div className="reverse-placement-button" onClick={() => navigate("/")}><p className="draft-text">Start another draft</p></div>
+      <div className="placement-options-wrapper">
+        <div className="placement-buttons" onClick={() => navigate("/")}><p className="draft-text">Start another draft</p></div>
+      </div>  
     </div>
   );
 };
