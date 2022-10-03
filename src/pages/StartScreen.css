@@ -19,17 +19,18 @@
 }
 
 label {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 input {
   font-family: 'Noto Sans JP', sans-serif;
   padding: 3px 0 3px 3px ;
+  font-size: 16px
 }
 
 .letsa-go {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   width: 75px;
   align-self: center;
   margin: 20px 0 0 0;
@@ -60,7 +61,7 @@ input {
 }
 
 .name-label {
-  font-size: 12px;
+  font-size: 14px;
   max-width: 200px;
   text-align: center; 
   margin: 0 0 20px 0;
@@ -68,7 +69,7 @@ input {
 
 .players-input {
   width: 30px;
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 20px;
 }
 
@@ -112,7 +113,7 @@ input {
 
 .placement-options-text {
   margin-bottom: 20px;
-  font-size: 12px;
+  font-size: 14px;
   max-width: 200px;
   text-align: center;
 }
@@ -194,7 +195,7 @@ input {
 
 .draft-text {
   padding: 10px 0  10px 20px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 
